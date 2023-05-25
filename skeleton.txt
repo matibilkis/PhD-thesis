@@ -5,8 +5,280 @@ T0, T1, T2 = BASIC ANY PHYCISITS, INTERRMETIDATE GIQ, TECHNICAL JURY/COLLABS
 
 ------------------------------------S0---------------------------------------------
 |                                                                                 |
+|                          Decision-making in quatnum envs                        |
+|                         from model-free to model aware learning of              |
+|                                  quantum controls                               |
+|                                                                                 |
+|                     COVER                                                       |
+|                                                                                 |
+|                                                           GITHUB                |
+|                                                          QR CODE                |
+|                                                                                 |
+|                                  PhD thesis                                     |
+|                                    12 june                                       |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+
+Little sketch ? In the next 10 mins or so motivation ? I don't think so!!
+
+------------------------------------S1---------------------------------------------
+|                                                                                 |
+|               TOOLBOX QUANTUM                                                   |
+|                                                                                 |
+|         QA     NISQ, QADVANTAGE  (Discrete system, discret measurement
+|                                                                                 |
+|         QB    optical communication                                             |
+                what comes from space is almost vaccuumm
+                                  (continuous system, discrete measurement)
+
+|        QC   cavity optomechanics
+              continuous monitoring
+|             sensing (heisenberg?
+                          continuous system, continuous measuremnet
+
+|                                                                                 |
+-----------------------------------------------------------------------------------
+
+************************************************************************************
+***             some papers/ references                                        ***
+***                                                                              ***
+***     A supremacy,classification of phases? Generalization? Long-time?       ***
+***                               (!) how do you build ansatz                     ***
+***                                   in boson-sampling?                        ***
+***
+                                %%%MENTION that this is for an specific cost function...! ----> Do you train for boson sampling? I don't think so..
+
+
+***    B Quantum internet & communication satellite comms          ***
+***                       HOW DO YOU DEAL WITH UNKNOWN SOURCES OF NOISE?       ***
+***                                           secure comms?                      ***
+***                                            becerra implementations..?      ***
+***    C. Quantum sensing ----> haroche experiment                            ****
+***                            alice&bob, check como references             ***
+***                       HOW TO PROCESS ALL THIS DATA?
+
+                          USE FRAGILITY OF QUANTUM STATES LIKE ATOMS
+                          TO MEASURE THINGS!
+
+                          possible papers, magneto-es Morgan, Heisenberg-limit Giovanetti?
+************************************************************************************
+
+
+
+------------------------------------S2--------------------------------------------
+|                                                                                 |
+|                     ____
+                  .'* *.'
+               __/_*_*(_
+              / _______ \                      scientists need to take decisions
+             _\_)/___\(_/_
+            / _((\- -/))_ \                   A --_> BUILD QUANTUM CIRCUIT
+            \ \())(-)(()/ /                   B---> CHOOSE MEASUREMENT
+             ' \(((()))/ '                    C----> ANALYZE DATA TO ASSSESS PARAMETERS VALUE...
+            / ' \)).))/ ' \
+           / _ \ - | - /_  \
+          (   ( .;''';. .'  )
+          _\"__ /    )\ __"/_
+            \/  \   ' /  \/
+             .'  '...' ' )
+              / /  |  \ \                   this picture with the robot as welll!! maybe later in other slide with the heart
+             / .   .   . \
+            /   .     .   \
+           /   /   |   \   \
+         .'   /    b    '.  '.
+     _.-'    /     Bb     '-. '-._
+ _.-'       |      BBb       '-.  '-.
+(________mrf\____.dBBBb.________)____)
+
+-----------------------------------------------------------------------------------
+------------------------------------S3--------------------------------------------
+|                                                                                 |
+|                        advent of ai                                                         |
 |                                                                                 |
 |                                                                                 |
+|                         BEHIND THERE'S AN ALGORITHM                          |
+|                           WHICH MIGHT OR MIGHT NOT BE                   |
+|                                  VERY SOPHISTICATED                             |
+|                                                                                 |
+|  (IDEA take example of the BLOB to introduce then ARTIFICAILLITY AND USAGE ???)
+                                                                             |
+|    DEEP LEARNING -> EXAMPLE WITH THE COVER                                    |
+|    REINFORCEMENT LEARNING ---> HOW TO LEARN OPTIMAL                            |
+|    playlists, change points ? maybe when you run out of food for the BLOB ?... SPOTIFY ??? DOES SPOTIFY have a change point algorithm?
+|    kalman filters ---> track your position ? GMAPS ?                          |
+-----------------------------------------------------------------------------------
+
+
+------------------------------------S4--------------------------------------------
+|        in this thesis                                                           |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|         .....           .....
+   ,ad8PPPP88b,     ,d88PPPP8ba,
+  d8P"      "Y8b, ,d8P"      "Y8b
+ dP'           "8a8"           `Yd             DESICION-MAKING
+ 8(              "              )8
+ I8  AI + SCIENTIST             8I
+  Yb,                         ,dP              USE EACH FRAMEWORK AS PLAYGROUND
+   "8a,                     ,a8"               NOT ONLY FOR AN AI, BUT ALSO
+     "8a,                 ,a8"                 TO MAKE DECISIONS AIDED BY THE AI
+       "Yba             adP"
+         `Y8a         a8P'
+           `88,     ,88'
+             "8b   d8"
+              "8b d8"
+               `888'
+                 "
+|
+-----------------------------------------------------------------------------------
+
+
+------------------------------------S5---------------------------------------------
+|                                                                                 |
+|
+                  ████████████████████████████████▒▒
+                  ████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▓▓
+                  ██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░████                           RLCOH
+                  ██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░██▒▒                A          VANS
+                  ████░░░░░░░░░░░░░░░░░░░░░░░░░░██                  W          SPRT
+                  ▒▒██░░░░░░░░░░░░░░░░░░░░░░░░░░██                  A
+                    ██░░░░░░░░░░░░░░░░░░░░░░░░░░██                  R
+                    ██░░░░░░░░░░░░░░░░░░░░░░░░▒▒██                  E
+                    ██▒▒░░░░░░░░░░░░░░░░░░░░░░▒▒██                  N
+                    ██░░░░░░░░░░░░░░░░░░░░░░░░▓▓██                  E
+                    ██▒▒░░░░░░░░░░░░░░░░░░░░░░▓▓▓▓                  S
+                    ██▓▓░░░░░░░░░░░░░░░░░░░░░░██▓▓                  S
+                    ▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░██▒▒
+                    ▓▓██░░░░░░░░░░░░░░░░░░░░░░██░░
+                    ▒▒██░░░░░░░░░░░░░░░░░░░░░░██
+                    ░░██░░░░░░░░░░░░░░░░░░░░▒▒██
+                      ██░░░░░░░░░░░░░░░░░░░░▒▒██
+                      ██░░░░░░░░░░░░░░░░░░░░▒▒██
+                      ██▒▒░░░░░░░░░░░░░░░░░░▓▓██
+                      ██▒▒░░░░░░░░░░░░░░░░░░▓▓▓▓
+                      ██▓▓░░░░░░░░░░░░░░░░░░██▓▓                  ░░
+░░██████▒▒░░          ██▓▓░░░░░░░░░░░░░░░░░░██▒▒          ░░▒▒▓▓████
+  ████▓▓████████▓▓▒▒░░▓▓▓▓░░░░░░░░░░░░░░░░░░██▒▒░░▒▒██████████▓▓██▒▒
+  ░░██▒▒░░░░▒▒▓▓▓▓████████░░░░░░░░░░░░░░░░░░████████▓▓▒▒▒▒░░░░▓▓██
+    ▓▓██░░░░░░░░░░░░░░▒▒▒▒░░░░░░░░░░░░░░░░░░▒▒▒▒░░░░░░░░░░░░▒▒██
+      ████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██▓▓
+        ██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░████
+        ▒▒██▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██░░
+          ▓▓██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒██▒▒
+            ██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██▓▓
+            ░░██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+              ▒▒██▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒██░░
+                ▓▓██░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒██▒▒
+                  ██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░██▓▓
+                  ░░██▒▒░░░░░░░░░░░░░░░░░░░░░░▓▓██
+                    ▒▒██░░░░░░░░░░░░░░░░░░░░▒▒██░░
+                      ████░░░░░░░░░░░░░░░░▒▒██▒▒
+                        ▓▓██░░░░░░░░░░░░░░██▒▒
+                          ████░░░░░░░░▒▒██▓▓
+                            ██▓▓░░░░▒▒████
+                            ▒▒██▒▒░░████░░
+                              ████▒▒██▒▒
+
+-----------------------------------------------------------------------------------
+
+up to here, 15 mins MAXIMO
+
+------------------------------------S6 --------------------------------------------
+|                                                                                 |
+|               outline                  LEARNING IN THE...               |
+|                                                                                 |
+|            DARKNESS
+|                                                                                 |
+|            TWILIGHT
+|
+
+              DAYLIGHT                                       |
+-----------------------------------------------------------------------------------
+
+Maybe use some emoji?? or some background ??
+
+
+###### some tips for the audience... separate chapters, while interconnected to each other,
+if you get lost, you can recap in the next chapter
+
+
+------------------------------------s7-------------------------------------------
+|  learning darkness                                                              |
+|                                                                                 |
+|     (john said... take-home messages??                                        |
+|                                                                                 |
+|     QSD                                                                         |
+|        ---                                  \rho \in ¬rho-1, \rho_2             |
+|                                                                                 |
+|      * Measureement M = M_1 M_2                                               |
+|                                                                                 |
+|              p(i|rho) = tr M_i rho_i)   ---> DECISION RULE
+
+      ** SUCESS PROBABILITY
+
+      *** Helstrom bound ----> mention is projection over non-gaussian states ---> CAT STATES PQ0 ---> derive tihs!
+-----------------------------------------------------------------------------------
+
+
+
+------------------------------------S8--------------------------------------------
+|                                                                                 |
+|       physical picture ---> comunication                                        |
+|                              "FREE VARIABLES " RHO_0, RHO_1 AND povm           |
+|                                                                                 |
+|                                          USE THIS SETTING
+                                          TO SEND 1 BIT OF INFORMATION
+
+                       |
+|                   MAN 1                             MAN 2                       |
+|                     --------------------------------->                          |
+|                                                                                 |
+|   *** to send info we choose lasers ---> described by \alpha                |
+|                     ** this is a good approximation since atmosh´here modeled by lossy channel
+                           you loos a photon and still it is a coherent state
+|                                   they are easy to prepare
+
+so we fix the candidate states, then we have the freedom to choose the POVM
+
+           |
+-----------------------------------------------------------------------------------
+------------------------------------S9--------------------------------------------
+|                                                                                 |
+|                                                                                 |
+|   Here i want to play with the quantum receiver...
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                   MAN 1                             MAN 2                       |
+|                     --------------------------------->
+|                                                      quatum                     |
+|                   phase space                       receiver                   |
+|                    check this review                                          |
+|                     the plots were nice
+                      in phase space
+-----------------------------------------------------------------------------------
+
+
+------------------------------------S10------------------------------------------
+|                                                                                 |
+|          HOMODYNE    ** optimal over gaussian measurements (PQ 1)
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                   MAN 1                             MAN 2                       |
+|                     --------------------------------->
+|                                                      quatum                     |
+|                   phase space                       receiver                   |
+|                    check this review                   HOMODYNE               |
+|                     the plots were nice
+                      in phase space
+-----------------------------------------------------------------------------------
+
+
+
+------------------------------------S11------------------------------------------
+|       PLOT HOMODYNE , HELSTROM VS. ALPHA                            |
 |                                                                                 |
 |                                                                                 |
 |                                                                                 |
@@ -19,10 +291,432 @@ T0, T1, T2 = BASIC ANY PHYCISITS, INTERRMETIDATE GIQ, TECHNICAL JURY/COLLABS
 |                                                                                 |
 -----------------------------------------------------------------------------------
 
-------------------------------------S0---------------------------------------------
+------------------------------------S12-----------------------------------------
+|                                                                                 |
+|          kENNEDY  ----> Some non-ngaussian resources
+|                        some intuition on what0s doing ????              |
+|                                                                                 |
+|                                                                                 |
+|                   MAN 1                             MAN 2                       |
+|                     --------------------------------->
+|                                                      quatum                     |
+|                   phase space                       receiver                   |
+|                    check this review                   kENNEY         |
+|                     the plots were nice
+                      in phase space
+-----------------------------------------------------------------------------------
+
+
+------------------------------------S13------------------------------------------
+|       PLOT HOMODYNE , HELSTROM VS. KENNEDY VS ALPHA                |
 |                                                                                 |
 |                                                                                 |
 |                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|      STILL NOT HELSTROM!!!                                                  |
+|                                                                                 |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+
+------------------------------------S14------------------------------------------
+|                                                                                 |
+|          DOLINAR (SPACE)
+|                                                                                 |
+|                                 ** feedfowrad ops...                      |
+|                                                                                 |
+|                   MAN 1                             MAN 2                       |
+|                     --------------------------------->
+|                                                      quatum                     |
+|                   phase space                       receiver                   |
+|                    check this review                   SPACE     |
+|                     the plots were nice
+                      in phase space
+
+
+-----------------------------------------------------------------------------------
+
+
+------------------------------------S15--------------------------------------------
+|   WHY IS DOLINAR INTERESTING?                                                 |
+|                                                                              |
+|                              hELSTROM                                         |
+|                              "OPERATIONS FRINEDLY TO LAB"                       |
+|                                                                                 |
+|    HOWEVER NOISE PLAYS A FUNDAMENTAL STONE...           |
+|                                                                                 |
+|          pq2 ---> OPTIMALITY DOLINAR                                        |
+-----------------------------------------------------------------------------------
+------------------------------------S16-------------------------------------------
+|                                                                                 |
+|  MAIN 1 -------------------UNKNOWN channel AS MOTIVATION!!!-------> ROBOT 1             |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+------------------------------------S17--------------------------------------------
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                     REFINforement learning dolinar receiver                        |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|         * value functions
+states
+actions                                       |
+|            policies                                                             |
+|                   PODMP                                                       |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+------------------------------------S18--------------------------------------------
+|                                                                                 |
+|                         Q learning                                              |
+|                                                                                 |
+|                                                                                 |
+|          ROBOT               ---> Q-table                                       |
+|          FIGURE                   sequentially repetitions                 |
+|                                                                                 |
+|                                                                                 |
+|                                      maybe show an animation ?                  |
+|                                       maybe the Sonar ??                       |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+------------------------------------S19--------------------------------------------
+|                                                                                 |
+|                              learning with bandits                            |
+|                                  RESULTS                                        |
+|                                                                                 |
+|                                                                                 |
+|             PQ BANDITS!!!                                                     |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+------------------------------------S20-------------------------------------------
+|                                                                                 |
+|                              NOISE ROBUSTNESS                                   |
+|                                                                                 |
+|                    phse flips                                                   |
+|                                                                                 |
+|                     dark-counts                                                 |
+|                                                                                 |
+|                                                                                 |
+|                   ITW compound channels                                         |
+|                                                                                 |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+------------------------------------S21--------------------------------------------
+|                                                                                 |
+|                                                                                 |
+|                 OUTLOOK                                                         |
+|                                                                                 |
+|                                                                                 |
+|        PQ Projective simulation and other methods!                            |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+
+------------------------------------S22-------------------------------------------
+|                                                                                 |
+|                                                                                 |
+|                         WEAKNESSES                                             |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+------------------------------------S23-------------------------------------------
+|                                                                                 |
+|        LEARNING TWILIGHT                                                       |
+|                                                                                 |
+|    cURRENT NISQ COMPUTERS                                                       |
+|                                                                                 |
+|                                                                                 |
+|        FROM GATE DICTIONARY YOU GET                                             |
+|                                                                                 |
+|                                    ----> CIRCUIT                                |
+|                   *** not every U reacahable, we have hardware               |
+|                         constreaints as well as noise related issues     |
+-----------------------------------------------------------------------------------
+
+
+------------------------------------S24-------------------------------------------
+|      QUANTUM MACHINE LEARNING (VQAs)                                            |
+|                                                                                 |
+|                                                                                 |
+|    -ANSATZ                                           FIG1 thesis                |
+|                                                          VQA                    |
+|                                                                                 |
+|        -COST FUNCTIONS               ---> PQ4 (is thiscost very general?)  |
+|                                                                                 |
+|   -OPTIMIZATION PROCUEDURE                                                      |
+|                                                                                 |
+|                                                                                 |
+
+
+------------------------------------25------------------------------------------
+|  which ansatz to use? ---> NON TRIVIAL                                         |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|   * qml problems ---> trainability            --> PQ Barren plateaus           |
+|                        noise related issues                                   |
+|                                      expressibility inducd                      |
+|                                                                                 |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+------------------------------------S26-------------------------------------------
+|                                                                                 |
+|      vans                                                                       |
+|                                                                                 |
+|               robot -> k -> U(k) -> robot...                                     |
+|                                                                                 |
+|                  ** semi-agnosticness                                           |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+------------------------------------S27-------------------------------------------
+|                                                                                 |
+|                      VANS' rules                                                |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+------------------------------------S28-------------------------------------------
+|                                                                                 |
+|                  results on paradicgmatic QML processs                        |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|    VQE                  AUTOENCODR                                             |
+|                                                                                 |
+|              COMPILING                                                          |
+|                                                                                 |
+|                  PQ ---> AUTOENCODR
+                  PQ---> COMPILING                             |
+|       *** use bubbles, show we have the results, but only next VQE            |
+-----------------------------------------------------------------------------------
+------------------------------------S29-------------------------------------------
+|      TFIM                                                                       |
+|                                                                                 |
+|                        COST for different fields...                           |
+|                         comparison with HEA --_> PQ why HEA might be well at TFIM ??? is there a symmetry hidden here ?
+|           FIG 8        paper, cost + circuit structure                       |
+|                                                                                 |
+|                        circuut layout ... avideo of the optimization ?         |
+-----------------------------------------------------------------------------------
+------------------------------------S30-------------------------------------------
+|                                                                                 |
+|        TFIM                                                                     |
+|                                                                                 |
+|             lambda model                                                        |
+|                                                                                 |
+|                         pq---> explain lambda model                        |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+------------------------------------S31-------------------------------------------
+|                                                                                 |
+|            outlook                                                              |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+------------------------------------S32--------------------------------------------
+|                                                                                 |
+|                 weaknesses                                                      |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+------------------------------------S33-------------------------------------------
+|                                                                                 |
+|                 LEARNING DAYLIGHT                                               |
+|                                                                                 |
+|       full description of problem's solution                                 |
+|                                                                                 |
+|         * tackle statistical inference problems                               |
+|                     ---> given Y~P, infer info about P                          |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+------------------------------------S34-------------------------------------------
+|                       Hypothesis testing                                        |
+|                                                                                 |
+|                                                                                 |
+|                        Gaussian example                              |
+|                                                                                 |
+|                                                                                 |
+|          assymptotic errors                ---> show histograms for different N|
+|          Neymann-pearson                                                     |
+|                                                                                 |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+------------------------------------S35-------------------------------------------
+|                                hypothesis testing                               |
+|                                                                                 |
+|                        Gaussian example                                         |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|          d\ell   (additive...)   ---> relative entropies                     |
+|                                      PLOT ell vs. N                             |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+------------------------------------S36-------------------------------------------
+|                                                                                 |
+|                                                                                 |
+|                        Gaussian example                                         |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|         Sequential probbility ratio test ---> stopping time
+|                                                   |                             |
+|                                                   v                             |
+|                                                  wald distro                  |
+-----------------------------------------------------------------------------------
+------------------------------------S37-------------------------------------------
+|                                                                                 |
+|                                                                                 |
+|      SPRT vs.
+       deterministic                                                              |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+
+------------------------------------S38-------------------------------------------
+|                           CONTINUOUSLY MONITORED SYSTEMS                                    |
+|                                                                                 |
+|        put the equations.... a man sitting  saying "infoabout P                  |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|          SME ---> Gaussian (kalman)                                        |
+|                                                                                 |
+|                                    hidden markov model                         |
+|                                                                                 |
+|                                                     back-action                |
+-----------------------------------------------------------------------------------
+------------------------------------S39-------------------------------------------
+|                                                                                 |
+|                  LOG LIKELIHOOD                                                 |
+|                                                                                 |
+|         Eqs. for d\ell ---> Joint OU-process                                    |
+|                                                                                 |
+|                                             show results moments                |
+|                                                                                 |
+|                                             show distributions for \ell
+      |                                       NON-GAUSSIANITY (or mayb this can go for a furure question...?)
+
+
+|                                                            POSSIBLE Q           |
+|                                                              show this          |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+
+------------------------------------S40------------------------------------------
+|                SEQUENTIAL                                                       |
+|                          WALD IDENTITY                                          |
+|                                    MEAN-STOPPING TIME                      |
+|                                          COMPARISON WITH  WALD DISTRO |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+
+
+------------------------------------S41-------------------------------------------
+|              COMPARISON BETWEEN TESTS                                          |
+|                                                                                 |
+|                                      MENTION THE ANALYTICAL POINTS             |
+|                                      FOR THE GAUSSIAN ERRORS                    |
+|                                                                                 |
+|                                                             --> PQ GAUSSIAN ERRORS
+|                                                                                 |
+|          ----> freq plots                                                            |
+|                                                                                 |
+|                                                                                 |
+|                                                                                 |
+-----------------------------------------------------------------------------------
+
+
+------------------------------------S42------------------------------------------
+|                                                                                 |
+|               estimation slide                                                  |
+|                                                                                 |
+|                                                                                 |
+|        the guy ---> the robot                                |
+|                                                                                 |
+|                       frequency --_> lorentzian ---> AD                        |
+|                                                                                 |
+|                       external forces ---> PLOTS                                |
+|                                                                                 |
+|                                          PQ -> how AD works here ?
+                                          pq _--> exaplain Kalman plots and the trace
+                                          pq --> why is it lorentzian ??
+-----------------------------------------------------------------------------------
+
+
+------------------------------------S43-----------------------------------------
+|                    OUTLOOK                                                      |
 |                                                                                 |
 |                                                                                 |
 |                                                                                 |
@@ -36,30 +730,14 @@ T0, T1, T2 = BASIC ANY PHYCISITS, INTERRMETIDATE GIQ, TECHNICAL JURY/COLLABS
 -----------------------------------------------------------------------------------
 
 
-------------------------------------S0---------------------------------------------
+
+------------------------------------S44------------------------------------------
 |                                                                                 |
 |                                                                                 |
+|                    MINI RECAP                                                   |
 |                                                                                 |
 |                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
+|                              FLECHITA, ...DE QUÉ HABLÉ                     |
 |                                                                                 |
 |                                                                                 |
 |                                                                                 |
@@ -68,364 +746,10 @@ T0, T1, T2 = BASIC ANY PHYCISITS, INTERRMETIDATE GIQ, TECHNICAL JURY/COLLABS
 -----------------------------------------------------------------------------------
 
 
-------------------------------------S0---------------------------------------------
+------------------------------------S45------------------------------------------
+|                  COLLABORATORS & giq                                           |
 |                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-
-
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-
-
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-
-
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-
-
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-
-
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-
-
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-
-
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-
-
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-
-
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-
-
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
------------------------------------------------------------------------------------
-
-
-------------------------------------S0---------------------------------------------
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
-|                                                                                 |
+|                                     AND BIG THANK YOU                           |
 |                                                                                 |
 |                                                                                 |
 |                                                                                 |
