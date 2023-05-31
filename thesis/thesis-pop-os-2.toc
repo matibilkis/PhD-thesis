@@ -1,0 +1,102 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Motivation}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Preliminaries}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Some basic notions of quantum information}{5}{section.2.1}%
+\contentsline {subsubsection}{Projective measurements}{7}{subsubsection*.8}%
+\contentsline {subsection}{\numberline {2.1.1}Closed-system dynamics}{8}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Quantum channels}{9}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Generalized quantum measurements}{10}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Quantum instruments}{11}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Quantum master equation}{12}{subsection.2.1.5}%
+\contentsline {section}{\numberline {2.2}NISQ $\&$ the qubits}{14}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Variational Quantum algorithms}{14}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}The Ansatz}{18}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}The optimization procedure}{22}{subsection.2.2.3}%
+\contentsline {subsubsection}{Classical simulation of quantum circuits $\&$ Automatic differentiation}{24}{subsubsection*.11}%
+\contentsline {subsubsection}{Experimental implementations on quantum hardware}{26}{subsubsection*.13}%
+\contentsline {subsection}{\numberline {2.2.4}Barren-plateaus}{28}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Discussion}{31}{subsection.2.2.5}%
+\contentsline {section}{\numberline {2.3}Continuous-variable systems}{32}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Gaussian systems}{34}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Some methods in phase space}{37}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Gaussian operations and beyond}{41}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Measurements}{42}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}Continuously-monitored systems}{43}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Cavity emission and photon-detection}{44}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Continuous photon-detection}{46}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Continuous homodyne detection}{50}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Intermezzo II: Ito calculus}{52}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.5}Imperfect detection}{57}{subsection.2.4.5}%
+\contentsline {subsection}{\numberline {2.4.6}The Gaussian case}{58}{subsection.2.4.6}%
+\contentsline {subsection}{\numberline {2.4.7}Optomechanical systems}{61}{subsection.2.4.7}%
+\contentsline {section}{\numberline {2.5}Statistical Inference}{64}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Hypothesis testing}{64}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Single-shot quantum state discrimination}{66}{subsection.2.5.2}%
+\contentsline {subsubsection}{The Helstrom bound}{67}{subsubsection*.18}%
+\contentsline {subsubsection}{The pure-states case}{69}{subsubsection*.19}%
+\contentsline {subsection}{\numberline {2.5.3}Back to the classics: asymetric hypothesis testing}{71}{subsection.2.5.3}%
+\contentsline {subsubsection}{Large deviations and assymptotic error rates}{72}{subsubsection*.21}%
+\contentsline {subsubsection}{Quantum hypothesis testing: a brief comment}{75}{subsubsection*.22}%
+\contentsline {subsection}{\numberline {2.5.4}Sequetial hypothesis testing}{76}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.5}Parameter estimation}{81}{subsection.2.5.5}%
+\contentsline {section}{\numberline {2.6}Reinforcement learning}{84}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Bandit problems}{86}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Value functions and the Bellman equation}{92}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Q-learning}{95}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.4}Model aware methods}{97}{subsection.2.6.4}%
+\contentsline {subsection}{\numberline {2.6.5}Discussion}{99}{subsection.2.6.5}%
+\contentsline {chapter}{\numberline {3}Learning in the darkness}{101}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Coherent-state quantum receivers}{104}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Gaussian receivers}{106}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Kennedy receivers}{108}{subsection.3.1.2}%
+\contentsline {subsubsection}{Optimized Kennedy receiver}{109}{subsubsection*.31}%
+\contentsline {subsection}{\numberline {3.1.3}Dolinar receivers}{111}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Time-domain Dolinar receiver $\&$ optimality}{114}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}The sequential structure of Dolinar receiver}{116}{subsection.3.1.5}%
+\contentsline {section}{\numberline {3.2}The model-aware approach}{119}{section.3.2}%
+\contentsline {subsubsection}{Unveiling Dolinar's strategy from the numerics}{122}{subsubsection*.37}%
+\contentsline {section}{\numberline {3.3}The model-free approach}{124}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Reinforcement learning the Dolinar receiver}{124}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Q-learning the Dolinar receiver}{126}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Optimal state-action values $\&$ convergence}{130}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}A little help from my bandit friends}{135}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Noise robusteness}{138}{subsection.3.3.5}%
+\contentsline {subsubsection}{Compound lossy channels}{139}{subsubsection*.46}%
+\contentsline {section}{\numberline {3.4}Discussion and future perspectives}{145}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Code}{147}{subsection.3.4.1}%
+\contentsline {chapter}{\numberline {4}Learning in the twilight}{149}{chapter.4}%
+\contentsline {section}{\numberline {4.1}The Variable Ansatz (VAns) Algorithm}{152}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}\texttt {Insertion} method}{155}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}\texttt {Simplification} method}{156}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Scaling of VAns}{160}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Using VAns}{160}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Transverse Field Ising model (TFIM)}{161}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}$XXZ$ Heisenberg Model}{165}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Molecular Hamiltonians}{166}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Quantum Autoencoder}{170}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Unitary compilation}{173}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Noise and the $\lambda $-model}{176}{subsection.4.2.6}%
+\contentsline {section}{\numberline {4.3}Discussion and future perspectives}{179}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Mitigating the effect of barren plateaus}{180}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Future directions}{181}{subsection.4.3.2}%
+\contentsline {subsubsection}{BP-aware implementation}{181}{subsubsection*.64}%
+\contentsline {subsubsection}{Reinforcement-learning}{182}{subsubsection*.65}%
+\contentsline {subsubsection}{CV systems, receivers and beyond}{182}{subsubsection*.66}%
+\contentsline {subsection}{\numberline {4.3.3}Code}{183}{subsection.4.3.3}%
+\contentsline {chapter}{\numberline {5}Learning in the daylight}{185}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{185}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Hypothesis testing in continuously-monitored systems}{186}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Sequential testing $\&$ Gaussian systems}{189}{section.5.3}%
+\contentsline {subsubsection}{Damping discrimination}{193}{subsubsection*.68}%
+\contentsline {subsection}{\numberline {5.3.1}The log-likelihood ratio}{194}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}To be or not to be Gaussian}{200}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Joint system evolution as an OU-process}{207}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Deterministic vs Sequential}{210}{subsection.5.3.4}%
+\contentsline {subsubsection}{Frequency discrimination}{210}{subsubsection*.78}%
+\contentsline {section}{\numberline {5.4}Parameter estimation $\&$ continuously-monitoring}{213}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}The spectral power and the Lorentizan fit}{213}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Evolution of the Fisher information}{215}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Maximum-likelihood estimation via automatic-differentiation}{216}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}Learning a linear force}{218}{subsection.5.4.4}%
+\contentsline {section}{\numberline {5.5}Discussion $\&$ future perspectives}{219}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Code}{220}{subsection.5.5.1}%

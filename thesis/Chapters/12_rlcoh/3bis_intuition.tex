@@ -1,0 +1,69 @@
+Before jumping to the optimization of Dolinar-like receivers (either model-aware or model-free), it is important to further discuss its structure, as captured by Eq~\ref{eq:psdol}. In turn, we can take profit of the sequential structure, in order to compute Eq.~\ref{eq:32OptSuc} in a model-aware setting, a quantity that will help us to benchmark the performance of agnostic agents.
+
+We will refer to a finite Dolinar receiver, \textit{i.e.} one consisting on $L$ processing layers as \textit{$L$-Dolinar}, and refer to the prior probability of having the state $\ket{+\alpha}$ as $\eta_0 = \eta$; as a consequence the prior probability of $\ket{-\alpha}$ is $\eta_1 = 1-\eta$. Whenever it is clear from the context, we will drop the subscripts and simply refer to $\eta$.
+
+To this end, we will study the performance of the $L$-receiver layer by layer, and first consider a $0$-Dolinar receiver. Without any measurement, we only rely on the prior probabilities to asses the label of the states (\textit{e.g.} to guess for the value of $k$). The success probability of such a trivial receiver thus corresponds to the probability of the most likely hypothesis:
+\begin{equation}\label{eq:0dol}
+P_s^{L=0}(\alpha, \eta) = \text{max } \llaves{\eta, 1-\eta}.
+\end{equation}
+Let us now consider an $1$-Dolinar receiver (\textit{e.g.} a Kennedy-like receiver). In such a case, the success probability --- when considering the optimal, \textit{i.e.} maximum-likelihood guess--- reads
+\begin{align}\label{eq:1dol}
+P_s^{L=1}(\alpha, \llaves{a}, \eta) &= \sum_{o_1 = 0,1} \underset{k}{\text{max }} p(\alpha_k, o_1),
+\end{align}
+where $p(\alpha_k, o_1)$ denotes the joint probability of having the state $\ket{\alpha_k}$ and observing outcome $o_1$, and $\llaves{a}$ reduces to the displacement with value $\beta$, as shown in Fig.~\ref{fig:kennedy_receiver}.
+
+The joint probability $p(\alpha_k, o_1)$ can be written in terms of the prior probabilty $\eta_k$ of having $\ket{\alpha_k}$ times the probability of observing outcome $o_1$, given we actually have such state:
+\begin{align}\label{eq:1dol_eta}
+P_s^{L=1}(\alpha, \llaves{a}, \eta) &=\sum_{o_1 = 0,1} \underset{k}{\text{max }} p(o_1 | \alpha_k) \eta_k.
+\end{align}
+On the other hand, we can also write the joint probability in terms of the total outcome probability, \textit{i.e.} $p(o_1) = \sum_{k} p(o_1, \alpha_k ) = \sum_{k} p(o_1|\alpha_k ) \eta_k$, and the \textit{posterior} probability of having $\ket{\alpha_k}$ once $o_1$ was observed:
+\begin{equation}\label{eq:rlcoh_bayes_prior}
+\eta_{k|o_1} = p(\alpha_k | o_1) = \frac{p(o_1|\alpha_k ) \eta_k}{p(o_1)}.
+\end{equation}
+With this, the success probability of Kennedy-like receivers reads
+\begin{align}\label{eq:1dol_post}
+P_s^{L=1}(\alpha, \llaves{a}, \eta) &=\sum_{o_1 = 0,1} p(o_1)\;\underset{k}{\text{max }} p(\alpha_k| o_1) \\
+&=\sum_{o_1 = 0,1} p(o_1) \;P_s^{L=0}(\eta_{k|o_1}),
+\end{align}
+where the dependence on $\llaves{a}$ is left implicit. We note that once once the outcome is observed, 1-Dolinar receivers trivially recurs to 0-Dolinar receivers, with a bayesian-updated prior values.
+
+Let us now consider a 2-Dolinar receiver. Here, the success probability reads
+\begin{align}\label{eq:2dol}
+P_s^{L=2}(\alpha, \llaves{a}, \eta) &=\sum_{o_1 = 0,1}\sum_{o_2 = 0,1} \;\underset{k}{\text{max }} p(\alpha_k, o_1, o_2) \\
+&=\sum_{o_1 = 0,1}\sum_{o_2 = 0,1} p(o_1, o_2)\;\underset{k}{\text{max }} p(\alpha_k|o_1, o_2 )\\
+&=\sum_{o_1 = 0,1} p(o_1) \sum_{o_2 = 0,1} p(o_2|o_1)\;\underset{k}{\text{max }} p(\alpha_k|o_1, o_2 )\\
+&=\sum_{o_1 = 0,1} p(o_1) \sum_{o_2 = 0,1} p(o_2|o_1)\;\underset{k}{\text{max }} \frac{p(o_2| \alpha_k o_1) \;p(\alpha_k|o_1)}{p(o_2|o_1)}\\
+&=\sum_{o_1 = 0,1} p(o_1) P_s^{L=1}(\eta_{k|o_1}),
+\end{align}
+where we expressed conditional outcomes probabilities as $p(o_1, o_2) = p(o_2|o_1)p(o_1)$, and used
+\begin{equation}\label{eq:depend}
+p(o_2|o_1) = \sum_{k}p(o_2 \alpha_k|o_1) = \sum_k p(o_2|\alpha_k o_1) p(\alpha_k|o_1) = \sum_k p(o_2|\alpha_k o_1) \eta_{k|o_1}.
+\end{equation}
+Here, we can readily highlight the conditional dependence of the actions. In the 2-Dolinar receiver, they are given by $\llaves{a_1, a_2^{o_1=0}, a_2^{o_1=1}}$, where $a_1$ denotes the first displacement (which is unconditional) and $a_2^{o_1}$ stands for the second displacement (conditioned on the outcome $n-1$). While this can be extended to consider the attenuation values as well, we will not reinforcement-learn them, since their contribution to the success probability is very small, as observed in the next Section.
+
+Thus, the conditional dependence of the actions is reflected in the outcome probabilities. For the first outcome $o_1$, the dependence is only on $a_1$ as
+\begin{equation}
+p(o_1) = \sum_k p(o_1 \alpha_k) = \sum_k p(o_1|\alpha_k) \eta_k = \sum_k (o_1 + (-1)^{o_1} e^{-|\alpha_k + a_1|^2})\eta_k,
+\end{equation}
+where we have wrote compactly the outcome probability of an on/off photodetector with coherent state $\ket{\alpha_k + a_1}$ as input. Furthermore, as Eq.~\ref{eq:depend} indicates, the dependence of $o_2$ with $o_1$ has a contribution on $a_2^{o_1}$ (through $p(o_2|\alpha_k o_1)$), but also through the updated prior $\eta_{k|o_1}$. In turn, the sequential interpretation of the Dolinar receiver crucially depends on this bayesian update; as observed in Eq.~\ref{eq:2dol}, a $2$-Dolinar receiver is an extension of a $1$-Dolinar receiver, in which the prior probability of each hypothesis is modified according to the first measurement outcome.
+
+Similarly, the sequential structure can be made explicit for the $L$-Dolinar receiver. Let us denote with $o_{\ell_1:\ell^{'}}$ the string of outcomes $(o_{\ell_1}, o_{\ell_1 +1}, ... o_{\ell_{'}})$ (with $\ell < \ell^{'}$). Then, the success probability of $L$-Dolinar receiver reads
+\begin{align}\label{eq:Ldol}
+P_s^{L}(\alpha,\eta) &= \sum_{o_{1:L}}  \underset{k}{\text{max }} p(\alpha_k, o_{1:L})  \\
+&= \sum_{o_1} p(o_1) \sum_{o_{2:L}} p(o_{2:L}|o_1)\underset{k}{\text{max }} p(\alpha_k| o_{1:L}) \\
+&= \sum_{o_1} p(o_1) \sum_{o_{2:L}} p(o_{2:L}|o_1)\underset{k}{\text{max }} \frac{p(\alpha_k| o_{2:L})\; p(\alpha_k| o_{1})}{p(o_{2:L}|o_1)} \\
+&= \sum_{o_1} p(o_1) \sum_{o_{2:L}} \underset{k}{\text{max }} p(\alpha_k| o_{2:L})\; p(\alpha_k| o_{1}) \\
+&= \sum_{o_1} p(o_1) P_s^{L-1}(\eta_{k|o_1}).
+\end{align}
+Thereby, enlarging Dolinar's receiver with an extra layer translates into bayesian updating the prior probability of each hypothesis.
+
+This resemblences to the dynamic programming procedure we discussed in Sec.~\ref{ssec:1_rl_dp}, where the principle of optimality (\textit{i.e.} the recurrence relation given by the optimal Bellman equation) allowed us to sequentially attain the optimal policy. Here, we observe that the best success probability --- \textit{i.e.} that optimized over all actions $\llaves{a}$ --- can be obtained by a sequential optimization of local problems, in this case given by Kennedy-like receivers with varying priors.
+
+Before jumping to this model-aware optimization, let us highlight some further symmetries that will find use in the following section. In particular, note we that the prior probability of having $\ket{\alpha}$, \textit{e.g.} $\eta_0 = \eta$, is sufficient to encode all the information required for the binary discrimination problem, since $\eta_1$ is trivially be obtained from $\sum_k\eta_k=1$. This simple symmetry should also be translated into the success probability. In turn, from Eq.~\ref{eq:1dol_eta} it is trivial to see that
+\begin{align}\label{eq:symmetry_kenn}
+P_S^{L=1}(\eta, \llaves{a}) =  P_S^{L=1}(1-\eta, \llaves{-a}),
+\end{align}
+where by $-a$ we mean that the displacement take now the opposite values. In practice, since $\eta_k \in[0,1]$, this means that it is sufficient to consider half of such an interval, the complementary optimal actions can be obtained from Eq.~\ref{eq:symmetry_kenn}.
+
+We will now turn to explain how the sequential structure studied above can be exploited in order to compute the optimal values of the displacements and success probabilities in the fully-aware scenario.
+% Moreover, this symmetry is trivially extended to the probability $p(n)$, and hence we can also use it for optimizing $L$-Dolinar receivers, which is the matter of the next section.% Sec.~\ref{sec:rlcoh_model_aware_approach_intro}.

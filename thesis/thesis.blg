@@ -1,0 +1,265 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: thesis.aux
+The style file: biblatex.bst
+I couldn't open database file publications.bib
+---line 10 of file thesis.aux
+ : \bibdata{thesis-blx,bibliography/1cv,bibliography/1rl,bibliography/intro,bibliography/itw,bibliography/disc,bibliography/rlcoh,bibliography/VANS,bibliography/quantum,bibliography/quantera,bibliography/statinf,publications
+ :                                                                                                                                                                                                                              }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: Editorial/title_small.aux
+A level-1 auxiliary file: Editorial/left_blank.aux
+A level-1 auxiliary file: Editorial/title_page.aux
+A level-1 auxiliary file: Editorial/copyright.aux
+A level-1 auxiliary file: Editorial/dedication.aux
+Already encountered file Editorial/left_blank.aux
+---line 36 of file thesis.aux
+ : \@input{Editorial/left_blank.aux
+ :                                 }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: Editorial/abstract_english.aux
+A level-1 auxiliary file: Editorial/abstract_catalan.aux
+A level-1 auxiliary file: Editorial/abstract_spanish.aux
+Already encountered file Editorial/left_blank.aux
+---line 40 of file thesis.aux
+ : \@input{Editorial/left_blank.aux
+ :                                 }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: Editorial/declaration.aux
+Already encountered file Editorial/left_blank.aux
+---line 54 of file thesis.aux
+ : \@input{Editorial/left_blank.aux
+ :                                 }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: Editorial/acknowledgments.aux
+Already encountered file Editorial/left_blank.aux
+---line 56 of file thesis.aux
+ : \@input{Editorial/left_blank.aux
+ :                                 }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: Editorial/contents.aux
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated field_info (elt_size=4) to 44480 items from 5000.
+Database file #1: thesis-blx.bib
+Database file #2: bibliography/1cv.bib
+Database file #3: bibliography/1rl.bib
+Database file #4: bibliography/intro.bib
+Database file #5: bibliography/itw.bib
+Repeated entry---line 447 of file bibliography/itw.bib
+ : @article{Dolinar1973
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 485 of file bibliography/itw.bib
+ : @article{Kennedy1973a
+ :                      ,
+I'm skipping whatever remains of this entry
+Database file #6: bibliography/disc.bib
+Database file #7: bibliography/rlcoh.bib
+Repeated entry---line 366 of file bibliography/rlcoh.bib
+ : @article{Wooters1994prettygood
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 380 of file bibliography/rlcoh.bib
+ :   @article{CrokeReviewQSD
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 415 of file bibliography/rlcoh.bib
+ :   @article{Audenaert2007Discrimination
+ :                                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 433 of file bibliography/rlcoh.bib
+ : @article{Hiai1991
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 450 of file bibliography/rlcoh.bib
+ : @article{Acin2005Multi
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 466 of file bibliography/rlcoh.bib
+ : @inproceedings{bilkisitw
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 485 of file bibliography/rlcoh.bib
+ : @article{Kennedy1973a
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 513 of file bibliography/rlcoh.bib
+ : @article{Vasylyev2017
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 529 of file bibliography/rlcoh.bib
+ : @article{Vasylyev2011
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 545 of file bibliography/rlcoh.bib
+ : @phdthesis{Watkins1989
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 553 of file bibliography/rlcoh.bib
+ : @article{Pirandola2021
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 567 of file bibliography/rlcoh.bib
+ : @article{Pirandola2021a
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 582 of file bibliography/rlcoh.bib
+ : @book{Bellman2003
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 593 of file bibliography/rlcoh.bib
+ : @book{Sutton2018
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 732 of file bibliography/rlcoh.bib
+ : @book{RevGauss
+ :                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 742 of file bibliography/rlcoh.bib
+ : @article{Cook2007
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 871 of file bibliography/rlcoh.bib
+ : @book{helstromBOOK
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 901 of file bibliography/rlcoh.bib
+ : @article{Dolinar1973
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 939 of file bibliography/rlcoh.bib
+ : @article{Kennedy1973a
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 980 of file bibliography/rlcoh.bib
+ : @article{Usenko2012a
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 994 of file bibliography/rlcoh.bib
+ : @book{Andrews2005
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1005 of file bibliography/rlcoh.bib
+ : @inproceedings{Dequal2020
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1044 of file bibliography/rlcoh.bib
+ : @inbook{Stein2
+ :               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 6720 of file bibliography/rlcoh.bib
+ : @book{Sutton2018
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8112 of file bibliography/rlcoh.bib
+ : @phdthesis{Watkins1989
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8589 of file bibliography/rlcoh.bib
+ : @book{Bellman2003
+ :                  ,
+I'm skipping whatever remains of this entry
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Repeated entry---line 14305 of file bibliography/rlcoh.bib
+ : @article{Kennedy1973a
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 14362 of file bibliography/rlcoh.bib
+ : @article{RevGauss
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 17616 of file bibliography/rlcoh.bib
+ : @misc{helstromBOOK
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 17795 of file bibliography/rlcoh.bib
+ : @article{Cook2007
+ :                  ,
+I'm skipping whatever remains of this entry
+Database file #8: bibliography/VANS.bib
+I was expecting a `,' or a `}'---line 569 of file bibliography/VANS.bib
+ : 
+ : Author = {Adam Glos and Anton Nykänen and Elsi-Mari Borrelli and Sabrina Maniscalco and Matteo A. C. Rossi and Zoltán Zimborás and Guillermo García-Pérez},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Database file #9: bibliography/quantum.bib
+Warning--I'm ignoring harrow2019low's extra "url" field
+--line 8986 of file bibliography/quantum.bib
+Repeated entry---line 11015 of file bibliography/quantum.bib
+ : @article{gu2021adaptive
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 11464 of file bibliography/quantum.bib
+ : @article{fowler2012surface
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 12876 of file bibliography/quantum.bib
+ : @article{weedbrook2012gaussian
+ :                               ,
+I'm skipping whatever remains of this entry
+Reallocated str_pool (elt_size=1) to 195000 items from 130000.
+Database file #10: bibliography/quantera.bib
+Repeated entry---line 151 of file bibliography/quantera.bib
+ : @article{wiseman1993quantum
+ :                            ,
+I'm skipping whatever remains of this entry
+Database file #11: bibliography/statinf.bib
+Biblatex version: 3.17
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 282 entries,
+            6399 wiz_defined-function locations,
+            3290 strings with 147121 characters,
+and the built_in function-call counts, 3441711 in all, are:
+= -- 306894
+> -- 38058
+< -- 11191
++ -- 107901
+- -- 14834
+* -- 246653
+:= -- 415425
+add.period$ -- 0
+call.type$ -- 282
+change.case$ -- 7675
+chr.to.int$ -- 287
+cite$ -- 580
+duplicate$ -- 350933
+empty$ -- 290110
+format.name$ -- 24875
+if$ -- 680186
+int.to.chr$ -- 0
+int.to.str$ -- 802
+missing$ -- 0
+newline$ -- 13789
+num.names$ -- 16691
+pop$ -- 112916
+preamble$ -- 1
+purify$ -- 10456
+quote$ -- 0
+skip$ -- 60064
+stack$ -- 0
+substring$ -- 595514
+swap$ -- 55097
+text.length$ -- 7514
+text.prefix$ -- 57
+top$ -- 1
+type$ -- 9565
+warning$ -- 0
+while$ -- 49852
+width$ -- 0
+write$ -- 13508
+(There were 42 error messages)

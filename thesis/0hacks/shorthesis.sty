@@ -1,0 +1,166 @@
+\usepackage{amsmath}
+\usepackage{bbm}
+\usepackage{scalerel}
+\usepackage[mathscr]{euscript}
+
+\newcommand{\dya}[1]{\ket{#1}\!\bra{#1}}
+\newcommand{\hec}{\mathscr{H}_{\mathbf{\eta}\mathbf{c}}}
+\newcommand{\Hec}{\mathcal{H}[\mathbf{\eta}\mathbf{c}]}
+\newcommand{\dyt}{d\mathbf{y}_t}
+\newcommand{\dwt}{d\mathbf{W}_t}
+\newcommand{\dwtau}{d\mathbf{W}_\tau}
+\newcommand{\Yt}{\mathcal{Y}_t}
+\newcommand{\DeltaXt}{\Delta \rbar_t}
+
+\newcommand{\sqneg}{S_{I}^{q}}
+\newcommand{\sqpos}{S_{II}^{q}}
+\newcommand{\rop}{\bm{\hat{r}}}
+\newcommand{\brop}{\bm{\hat{b}}}
+\newcommand{\crop}{\bm{\hat{c}}}
+
+\newcommand{\rhocm}{\rho_{c,m}}
+\newcommand{\xf}{\mathbf{x}}
+
+\newcommand{\aop}{\bm{\hat{a}}}
+
+\newcommand{\rbar}{\bm{\bar{r}}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\DC}{\mathcal{D}}
+\newcommand{\IC}{\mathcal{I}}
+\newcommand{\SC}{\mathcal{S}}
+\newcommand{\UC}{\mathcal{U}}
+\newcommand{\hatL}{\hat{L}}
+
+
+% \newcommand{\weyl}[1]{\hat{D}_{#1}}
+
+%---- Identidad ----
+\newcommand{\qid}{\mathbbm{1}}
+\newcommand{\rvec}{\bm{\vec{r}}}
+\newcommand{\spacee}{\;\;\;\;}
+\newcommand{\thv}{\bm{\theta}}
+\newcommand{\gamv}{\vec{\gamma}}
+\newcommand{\kvec}{\mathbf{k}}
+\newcommand{\Var}{{\rm Var}}
+\newcommand{\OC}{\mathcal{O}}
+\newcommand{\Oi}{\hat{O}_i}
+\newcommand{\Goc}{\mathcal{G}[c]}
+\newcommand{\Hoc}{\mathcal{H}[c]}
+
+
+\newcommand{\argmin}[1]{\underset{#1}{\text{argmin }}}
+\newcommand{\mmax}[1]{\underset{#1}{\text{Max }}}
+
+\newcommand{\argmax}[1]{\underset{#1}{\text{argmax }}}
+\newcommand{\overlap}[2]{\langle#1|#2\rangle}
+
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+
+\newcommand{\eq}[2]{\begin{equation}\label{eq:#1} #2 \end{equation}}
+\newcommand{\equ}[1]{\eq{}{#1}}   %corrección de john! funciona ?
+
+\newcommand{\re}[1]{\text{Re}[#1]}
+\newcommand{\im}[1]{\text{Im}\left[#1\right]}
+\newcommand{\sh}{\hat{S}}
+
+\newcommand{\corch}[1]{\left[ #1\right]}
+\newcommand{\Corch}[1]{\biggl\[ #1\biggr\]}
+
+\newcommand{\llaves}[1]{\lbrace #1\rbrace}
+\newcommand{\Llaves}[1]{\biggl\{ #1\biggr\}}
+\newcommand{\hoj}{\hat{H}_{\omega_j}}
+\newcommand{\Rt}{\mathbf{R}_{t}}
+\newcommand{\Pt}{\mathbf{P}_{t}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cF}{\mathcal{F}}
+
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cL}{\mathcal{L}}
+
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\real}{Re}
+\DeclareMathOperator{\imag}{Im}
+\DeclareMathOperator{\schmidt}{Sch}
+\DeclareMathOperator{\prob}{Pr}
+\newcommand{\ox}{$\otimes$}
+\newcommand{\dg}{$\dagger$}
+\newcommand{\id}{\mathbbm{1}}
+\newcommand{\norm}[1]{||#1||}
+
+\newcommand{\tr}[1]{\text{Tr}[#1]}
+\newcommand{\bra}[2][]{%
+  \def\@tempa{#1}%
+  \ifx\@tempa\@empty\relax%
+    \mathinner{\langle #2\rvert}%
+  \else%
+    \mathinner{\langle #2\rvert}_{#1}%
+  \fi}
+\newcommand{\ket}[2][]{%
+  \def\@tempa{#1}%
+  \ifx\@tempa\@empty\relax%
+    \mathinner{\lvert#2\rangle}%
+  \else%
+    \mathinner{\lvert#2\rangle}_{\hspace{-0.1em}#1}%
+  \fi}
+
+\newcommand{\ketbram}[3]{|#1\rangle_{#2}\langle#3|}
+\newcommand{\echan}[1]{\mathcal{E}\left[#1\right]}
+
+\newcommand{\ketbra}[3][]{%
+  \def\@tempa{#1}%
+  \ifx\@tempa\@empty\relax%
+    \mathinner{\lvert#2\rangle\langle #3\rvert}%
+  \else%
+    \mathinner{\lvert#2\rangle\langle #3\rvert}_{#1}%
+  \fi}
+\newcommand{\Ketbra}[3][]{%
+  \def\@tempa{#1}%
+  \ifx\@tempa\@empty\relax%
+    \left|#2\middle>\middle<#3\right|%
+  \else%
+    \left|#2\middle>\middle<#3\right|_{#1}%
+  \fi}
+\newcommand{\proj}[2][]{\ketbra[#1]{#2}{#2}}
+\newcommand{\Proj}[2][]{\Ketbra[#1]{#2}{#2}}
+
+\newcommand{\braket}[2]{\langle #1 | #2 \rangle}
+\newcommand{\te}{\theta}
+\newcommand{\tedos}{\frac{\te}{2}}
+
+\newcommand{\Dis}[1]{\hat{D}_{#1}}
+
+
+% ---- Valor esperado ----
+\newcommand{\expect}[1]{\mathinner{\langle #1\rangle}}
+\newcommand{\Expect}[1]{\left< #1 \right>}
+\newcommand{\bigExpect}[1]{\bigl< #1 \bigr>}
+\newcommand{\BigExpect}[1]{\Bigl< #1 \Bigr>}
+\newcommand{\biggExpect}[1]{\biggl< #1 \biggr>}
+\newcommand{\BiggExpect}[1]{\Biggl< #1 \Biggr>}
+\newcommand{\attentionmark}{\textbf{(!)}}
+
+%---- Conmutadores ----
+\newcommand{\comm}[2]{[#1,#2]}
+\newcommand{\weyl}[1]{\hat{D}_{#1}}
+
+\newcommand{\Comm}[2]{\left[#1,#2\right]}
+\newcommand{\Anticomm}[2]{\left\{#1,#2\right\}}
+\newcommand{\anticomm}[2]{\{#1,#2\}}
+
+% ---- Normas ----
+\newcommand\abs[1]{\lvert#1\rvert}
+\newcommand\Abs[1]{\left|#1\right|}
+\newcommand{\one}{\mathds{1}}
+
+\newcommand{\ii}{i}
+\newcommand{\symp}{\text{Sp}_{2n,\mathbb{R}}}
+\newcommand{\cov}{\bm{\Sigma}}
+\newcommand{\bomega}{\boldsymbol{\omega}}
+\newcommand{\SigmaJoint}{\bm{\mathcal{S}}}
+
+\newcommand{\SgmJointSt}{\SigmaJoint_{\text{st}}}

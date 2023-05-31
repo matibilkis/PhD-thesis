@@ -1,0 +1,214 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{bilkis2020realtime}{article}{}
+    \name{author}{4}{}{%
+      {{hash=BM}{%
+         family={Bilkis},
+         familyi={B\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=RM}{%
+         family={Rosati},
+         familyi={R\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=YRM}{%
+         family={Yepes},
+         familyi={Y\bibinitperiod},
+         given={R.\bibnamedelima Morral},
+         giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=CJ}{%
+         family={Calsamiglia},
+         familyi={C\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society}%
+    }
+    \strng{namehash}{BM+1}
+    \strng{fullhash}{BMRMYRMCJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{BRY+20}
+    \verb{doi}
+    \verb 10.1103/PhysRevResearch.2.033295
+    \endverb
+    \field{issue}{3}
+    \field{pages}{033295}
+    \field{title}{Real-time calibration of coherent-state receivers: Learning
+  by trial and error}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/PhysRevResearch.2.033295
+    \endverb
+    \field{volume}{2}
+    \field{journaltitle}{Phys. Rev. Research}
+    \field{year}{2020}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{bilkis2021semi}{article}{}
+    \name{author}{5}{}{%
+      {{hash=BM}{%
+         family={Bilkis},
+         familyi={B\bibinitperiod},
+         given={M},
+         giveni={M},
+      }}%
+      {{hash=CM}{%
+         family={Cerezo},
+         familyi={C\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=VG}{%
+         family={Verdon},
+         familyi={V\bibinitperiod},
+         given={Guillaume},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=CPJ}{%
+         family={Coles},
+         familyi={C\bibinitperiod},
+         given={Patrick\bibnamedelima J.},
+         giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=CL}{%
+         family={Cincio},
+         familyi={C\bibinitperiod},
+         given={Lukasz},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BM+2}
+    \strng{fullhash}{BMCMVGCPJCL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{BCV+21}
+    \field{title}{A semi-agnostic ansatz with variable structure for quantum
+  machine learning}
+    \verb{url}
+    \verb https://arxiv.org/abs/2103.06712
+    \endverb
+    \field{journaltitle}{arXiv preprint arXiv:2103.06712}
+    \field{year}{2021}
+  \endentry
+
+  \entry{bilkisitw}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=BM}{%
+         family={Bilkis},
+         familyi={B\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=RM}{%
+         family={Rosati},
+         familyi={R\bibinitperiod},
+         given={Matteo},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CJ}{%
+         family={Calsamiglia},
+         familyi={C\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BMRMCJ1}
+    \strng{fullhash}{BMRMCJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{BRC21}
+    \field{booktitle}{2021 IEEE Information Theory Workshop (ITW)}
+    \verb{doi}
+    \verb 10.1109/ITW48936.2021.9611396
+    \endverb
+    \field{pages}{1\bibrangedash 6}
+    \field{title}{Reinforcement-learning calibration of coherent-state
+  receivers on variable-loss optical channels}
+    \field{year}{2021}
+  \endentry
+
+  \entry{gasbarri2023sequential}{misc}{}
+    \name{author}{3}{}{%
+      {{hash=GG}{%
+         family={Gasbarri},
+         familyi={G\bibinitperiod},
+         given={G.},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Bilkis},
+         familyi={B\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CJ}{%
+         family={Calsamiglia.},
+         familyi={C\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GGBMCJ1}
+    \strng{fullhash}{GGBMCJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{GBC}
+    \field{title}{Sequential testing for continuously monitored quantum systems
+  - to be submitted}
+  \endentry
+
+  \entry{bilkis2023machine}{misc}{}
+    \name{author}{3}{}{%
+      {{hash=BM}{%
+         family={Bilkis},
+         familyi={B\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=GG}{%
+         family={Gasbarri},
+         familyi={G\bibinitperiod},
+         given={G.},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=CJ}{%
+         family={Calsamiglia},
+         familyi={C\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BMGGCJ1}
+    \strng{fullhash}{BMGGCJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{BGC}
+    \field{title}{Machine-learning dynamics in continuously-monitored quantum
+  systems - in preparation}
+  \endentry
+\enddatalist
+\endinput

@@ -1,0 +1,33 @@
+Let us now introduce the formalism describing continuous variables quantum systems, which sets the playground to work with optical and optomechanical quantum systems, as we do in Chaptes~\ref{chapter:RLCOH} and~\ref{chapter:CMON}. This section is intended as a brief introduction to the formalism of continuous-variable quantum systems, with an emphasis on Gaussian states and operations, and thus several topics remain out of the scope. The interested reader is referred to Refs.~\cite{serafiniBOOK, RevGauss} for a comprehensive review of these topics and more.
+
+A quantum continuous variable system is defined as a system whose $n$ degrees of freedom, as desribed by $2n$ canonical operators $\rop = \big(\hat{q}_1, \hat{p}_1, ..., \hat{q}_n, \hat{p}_n)^T$, obey the Canonical Commutation Relations (CCR):
+\eq{ccr}{\big[ \hat{q}_j, \hat{p}_k\big] = \ii \hbar \delta_{jk}, \; \; j,k =1,...,n.}
+Note that we can also define anhiliation and creation operators as $\hat{a}_j = \frac{\hat{q}_j + \ii \hat{p}_j}{\sqrt{2}}$, and $\aop = \big(\hat{a}_1, \hat{a}_1^\dagger...,\hat{a}_n,\hat{a}_n^\dagger\big)^T$, where an unitary transformation $\bar{U} = \bigoplus_{j=1}^{n}\bar{u}$, where $\bar{u} = \frac{1}{\sqrt{2}}\begin{pmatrix}1 & \ii \\ 1 & -\ii \\ \end{pmatrix}$
+relates the former operators with the later as $\aop = \bar{U}\rop$, and the CCR can be compactly written as
+\begin{align}\label{eq:cv_ccr}
+  \Comm{\rop}{\rop^\dagger} &= \ii \Omega, \spacee \Omega = \bigoplus_{i=1}^n \Omega_i, \spacee \Omega_i = \begin{pmatrix} 0&1\\-1&0\\\end{pmatrix}, \\
+  \Comm{\aop}{\aop^\dagger}&= \bar{\sigma}_z = \bigoplus_{i=1}^n \sigma^{(i)}_z
+  \end{align}
+where the notation $\Comm{\brop}{\crop^\dagger}  = \brop \crop^\dagger  - (\brop \crop^\dagger)^\dagger $ should be understood as an outer product which in components reads $\Comm{\brop}{\crop^\dagger}_{jk} = \brop_j \crop_k - \brop_k \crop_j $.
+
+Each canonical degree of freedom $j$ defines a \textit{mode} equipped with an infinite-dimensional Hilbert space $\mathcal{H}_j$, and thus we talk of a $n$-mode system whose Hilbert space is $\otimes_{j=1}^n \mathcal{H}_j$. Moreover, the $\Omega$ matrix in Eq.~\ref{eq:cv_ccr} is known as the \textit{symplectic} form, and it can be checked that holds: \textit{(i)}: antisymmetry $\Omega = - \Omega^T$, \textit{(ii)} its inverse is its negative  $\Omega^2 = - \id_{2n}$, and \textit{(iii)} it corresponds to a real orthogonal transformation $\Omega^T \Omega = -\Omega^2 = \id_{2n}$.
+From here, we are define Weyl transformations as
+\equ{\hat{D}_{\rvec} := e^{\ii \rvec \;\Omega \rop},}
+where $\rvec=\big(q_1, p_1, ..., q_n, p_n\big)$ is a constant vector in the phase space.% Note that $\weyl{-\rvec} = \weyl{\rvec}^\dagger$.
+A composition law of Weyl operators and its action on canonical operators can readily be derived, and reads\footnote{Here, we have used the CCR and the BCH formular, which relates the exponential of two operators $X,Y$ as \eq{campb}{e^X e^Y = e^Z, \spacee Z = X + Y + \frac{\Comm{X}{Y}}{2} +\frac{\Comm{X}{\Comm{X}{Y}}}{12} +\frac{\Comm{Y}{\Comm{X}{Y}}}{12} + ....}Moreover, if we take a \textit{central} commutator $\Comm{X}{Y}$, \textit{i.e.} $\Comm{X}{\Comm{X}{Y}} = \Comm{Y}{\Comm{X}{Y}} = 0$, then the action of $e^{X}$ by similarity reads \eq{camsim}{e^XYe^{-X} = Y + \Comm{X}{Y}}}
+%&%
+\begin{equation}\label{eq:compoweyl}
+\weyl{\rvec_1 + \rvec_2}  = \hat{D}_{\rvec_{1}} \hat{D}_{\rvec_{2}}  e^{\frac{\ii \rvec_1^T \Omega \rvec_2}{2}}
+\end{equation}
+\eq{actionweylop}{\weyl{\rvec}\;\rop\weyl{\rvec}^\dagger = \rop + \rvec.}
+This last equation indicates that Weyl operators act as \textit{displacement} transformations. Equivalently, we can express these transformations with respect to anhilation and creation operators; let $\vec{\bm{\alpha}} = \big(\re{\alpha_1}, \im{\alpha_1}, ..., \re{\alpha_n}, \im{\alpha_n} \big)$, with $\alpha_j = \frac{q_j + \ii p_j}{\sqrt{2}}$, \textit{e.g.} $\vec{\rvec} = \bar{U}^\dagger \vec{\bm{\alpha}}$,
+and define
+\begin{align}\label{eq:weyladag}
+\weyl{\vec{\bm{\alpha}}} &:= \weyl{\rvec}|_{\rvec=-\vec{\bm{\alpha}}} \\
+&= e^{\vec{\bm{\alpha}} \bar{\sigma}_z \aop},
+\end{align}
+and thus Eq.~\ref{eq:compoweyl} reads
+\begin{align}\label{eq:weylaop}
+\weyl{\vec{\bm{\alpha}}+\vec{\bm{\beta}}} =\weyl{\vec{\bm{\alpha}}} \weyl{\vec{\bm{\beta}}} e^{-\bm{\alpha}^T \bar{\bm{\beta}} + \bar{\bm{\alpha}}^T \bm{\beta}}
+\end{align}
+We will now introduce an important set of quantum states, which in turn constitute our battle-horse when dealing with continuous degrees of freedom.

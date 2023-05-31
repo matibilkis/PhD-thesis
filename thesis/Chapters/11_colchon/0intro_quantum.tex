@@ -1,0 +1,110 @@
+
+A system $\mathcal{S}$ is described by quantum theory using a $d$-dimensional Hilbert space $\mathcal{H}$; the dimension $d$ might be infinite, \textit{e.g.} if we want to describe systems in the continuous-variable (CV) ones, such as optical or mechanical ones. The state of the system is represented by a self-adjoint, positive semi-definite and unit-trace operator $\rho\in\mathcal{H}$.
+
+Physical quantities such as position, angular momenta or energy are described by self-adjoints operators, known as observables. As such they have an associated eigenbasis, each eigenstate being a unit-vector in $\mathcal{H}$ and deemed \textit{pure state}. Note however that a quantum state is generally found in a \textit{mixed state}, \textit{e.g.} a probabilistic mixture of pure states.
+
+The value that physical quantities can take is obtained by measuring the system, and this makes quantum theory a \textit{physical} one, since we can readily contrast measurement statistics with theoretical predictions.
+
+Given an orthonormal basis $\llaves{\ket{i}}_{i=1}^d$, a quantum state\footnote{While much of the following discussion applies to CV systems as well, we will restrict in this Section to finite $d$, and study CV-systems in Sec.~\ref{sec:1_cv}.} can be written as
+\equ{\rho = \sum_{i,j}\rho_{ij}\ketbra{i}{j},} where $\rho_{ij}$ are the matrix components of $\rho$. Since $\rho\>0$, its spectral decomposition is always available, with an associated  eigenbasis $\llaves{\ket{k}}$
+\equ{\rho = \sum_k p_k \proj{k},\spacee 0 \leq p_k\leq, \spacee \sum_k p_k=1,} where the conditions on $p_k$ arise from the fact that $\rho$ is positive semi-definite and unit-trace operator. The purity of the state is defined as $\tr{\rho^2}$; while pure-states are represented by rank-one operators (of purity $1$), mixed-states' purity is strictly less than $1$.
+
+Composite systems are described in a Hilbert space formed by the tensor-product of the individual components. As an example, let us consider bipartite systems with parties $\cS$ and $\cA$; the composite quantum state $\rho_{SA}$ is an operator in $\mathcal{H}_{\cS \cA} = \mathcal{H}_\mathcal{S}\otimes \mathcal{H}_\mathcal{A}$. Taking a basis for $\mathcal{H}_{\cS \cA}$ formed by a tensor-product of basis $\ket{i_S}$ and $\ket{j_A}$ in $\mathcal{S}$ and $\mathcal{A}$ respectively, we obtain that
+\equ{\rho_{AS} = \sum_{ijkl}\rho_{ij}^{kl} \ketbram{i}{S}{j}\otimes\ketbram{k}{A}{l}.} A state is \textit{separable} if it can be written as a convex combination of product-like states, \textit{i.e.}
+\equ{\rho_{AS}^{sep} = \sum_k p_k \rho_S^{(k)} \otimes \rho_A^{(k)},} where $\rho_i^{(k)}$ is a \textit{local} quantum state in subsystem $i=S,A$. If $\rho_{AS}$ cannot be written in this form, then the state exhibits quantum correlations.
+
+The reduced state of each subsystem is defined via the partial-trace~\cite{nielsen00}; \textit{e.g.} $\rho_{S(A)} = \text{Tr}_{A(S)}\left[\rho_{AS}\right]$. For instance, the local state of system $\mathcal{S}$ reads
+\equ{\rho_S = \tr{\rho_{AS}} = \sum_m \bra{m_A}\Big(\sum_{ijkl} \rho_{ij}^{kl} \ketbram{i}{S}{j} \otimes \ketbram{k}{A}{l}\Big)\ket{m_A} = \sum_{ijm} \rho_{ij}^{mm} \ketbram{i}{S}{j}.}
+
+\subsubsection{Projective measurements}
+
+In order to extract information out of a quantum state, we need to measure it. Quantum measurements deliver a classical outcome, and provide a route to map quantum information to classical one. While generalized measurements will be discussed in Sec.~\ref{ssec:1_intro_qmeas}, we will now discuss a particular type of measurement.
+
+Projective measurements consist on orthogonal projectors $\llaves{E_k}$ such that $E_k E_j = \delta_{kj}E_j$, with $\sum_k E_k = \mathbb{I_d}$, and $E_k = E_k^\dagger$. Here, the possible measurement outcomes are $\llaves{k}_{k=0}^{d-1}$, and the probability of outocome $k$ given the state of the system is $\rho$ reads\equ{p(k) = \tr{\rho E_k}.} Moreover, the state of the system after this outcome occurs, known as the post-measurement state, is given by \equ{\rho \rightarrow \rho_{|k} = \frac{E_k \rho E_k}{\tr{\rho E_k}},} where we note that the normalization is given by the probability of such measurement outcome. On the contrary, if the measurement is performed bu the outcome is not known, the \textit{unconditional post-measurement state} is given by \equ{\rho \rightarrow \sum_k E_k \rho E_k.}Here, we observe that \textit{(i)} the unconditional state is the average of all possible conditional-states, as weighted by the corresponding probability $p(k)$, and \textit{(ii)} if the original state to be measured is pure, then not recording the measurement outcome will generally convert it to a mixed state.
+
+As an example, let us consider an observable $O$. We can readily construct a projective measurement via its spectral decomposition, \textit{i.e.} $\hat{O} = \sum_k o_k \proj{k}$, leading to $E_k = \proj{k}$ and
+\equ{\expect{O}_\rho = \tr{\hat{O}\rho} = \sum_k p_k o_k,}
+where $p_k = \tr{\rho \proj{k}}$ is the probability of finding the state $\rho$ in the $k^{th}$ eigenstate of $\hat{O}$. Here, let us recall that if $\hat{H}$ is the system's Hamiltonian, then \textit{the variational theorem} is obtained by noting that $p_k\geq0 \;\forall k$; it follows that $\expect{H}_\rho\geq E_0$ where $E_0$ is the ground-state energy, \textit{i.e.} the lowest eigenvalue of $\hat{H}$. The inequality is saturated in the case that $\rho$
+is the ground-state of $\hat{H}$; this is the basis of variational quantum algorithms, where $\rho$ is evolved in such a way to get as close as possible to the ground-state, as discussed Sec.~\ref{sec:1_nisq}.
+
+\subsection{Closed-system dynamics}\label{ssec:1_intro_unitary_evo}
+The evolution of a closed quantum system is given by an unitary transformation $\hat{U}_t$, generated by a Hamiltonian $\hat{H}$, \textit{e.g.} $\hat{U}_t = e, {-\ii \hat{H}t}$, where the Hamiltonian will be assumed time-independent. Here, the Schrodinger equation describes quantum-state evolution according to
+\equ{\partial_t \rho(t) = -\ii \comm{\hat{H}}{\rho(t)}.} The solution to such equation can be expressed as \eq{schro}{\rho(t) = \hat{U}_t\rho(0)\hat{U}_t^\dagger,} and this constitutes the \textit{Shcrodinger picture}.
+However, the time-dependence of the quantum state can be entirely translated to the observables, which gives rise to the \textit{Heisenberg picture}. In turn, by defining \equ{\hat{O}(t) = \hat{U}^\dagger \hat{O}(0) \hat{U},}we observe that the expected value of $O$ reads \equ{\expect{O}(t) = \tr{O(0)\rho(t)} = \tr{O(t)\rho(0)}.} The correspoding equation of motion for the observable reads
+\equ{\partial_t O(t) = \ii \comm{H}{O(t)}.}
+Moreover, the \textit{interaction picture} ---or interaction frame--- is obtained by decomposing the Hamiltonian in terms of the \textit{free} Hamiltonian $H_0$ and an interaction term $V$ according to $H=H_0 + V$. In this picture, both states and observables depend on time, according to \equ{\rho_{IF}(t) = e^{-\ii H_0 t} \rho(0)e^{\ii H_0 t},}\equ{\hat{O}_{IF}(t) = e^{-\ii H_0 t}\hat{O}(0)e^{\ii H_0 t},} and the evolution of $\rho_{IF}(t)$ reads \equ{\partial_t \rho_{IF}(t) = -\ii \comm{V}{\rho_{IF}(t)},}
+where a similar evolution applies for observables as well.
+% Let us now turn to quantum measurements, which link the quantum to our (classical) world.
+
+Changes in quantum-states can be generalized to consider the case in which the quantum system is interacting with an environment, \textit{i.e.} an open-quantum system. While our discussion of the continuous-time case will be postponed until Sec.~\ref{ssec:1_intro_open}, we will now introduce a tool to represent discrete changes, such as those modeling the noise that a quantum-receiver suffers, as studied in Sec.\ref{ssec:rlcoh_noise}, or the noise injected into a quantum state by an imperfect NISQ-component, as we study in Sec.~\ref{ssec:vans_results_noise}.
+
+\subsection{Quantum channels}\label{ssec:1_intro_channels}
+A quantum channel $\Phi$ is a lineal map $\Phi:L(\mathcal{H}_1) \rightarrow L(\mathcal{H}_2)$, where $L(\mathcal{H})$ denotes the set of operators in $\mathcal{H}$ and the dimensions of the input-space $\mathcal{H}_1$ and output-space $\mathcal{H}_2$ might differ.
+
+The lineal map is required to be:
+\begin{itemize}\item Completely positive (CP): let $\mathcal{H}_{1'}$ be of dimension $d'$, then \equ{(\mathbb{I}_{d'}\otimes\phi)[\sigma]\geq0\;\forall d', \;\forall \sigma \in \mathcal{H}_{1'}\otimes \mathcal{H}_1.}
+\item Trace-preserving (TP).
+\end{itemize}The first condition is required such that when $\Phi$ acts locally (\textit{i.e.} on one out of many subsystems), the resulting global state is a positive state. The second condition is required such that the resulting state is unit-traced.
+
+Choi-Krauss theorem~\cite{manzano2019} guarantees that any CPTP channel admits a \textit{Kruss} decomposition:
+\begin{equation}
+\mathcal{M}(\rho) = \sum_{k=1}^N M_k \rho M_k^\dagger,
+\end{equation}
+with
+\eq{compKraus}{\sum_{k=1}^N M_k^\dagger M_k = \mathbb{I}_d.}
+The operators $\llaves{M_k}_{k=1}^N$ are known as \textit{Krauss operators}, and it is important to note that this decomposition is not unique.
+
+The non-uniqueness of Krauss decomposition is explicited by the \textit{Stinespring dillation}. This states that any CTPT channel can be obtained by unitarily evolving the input-system with an ancilla and tracing the latter out. To see this, let the initial state of the system and ancilla be $\rho$ and $\proj{0_A}$ respectively, and the closed (unitary) evolution of the joint system given by $\hat{U} = \hat{U}_{SA}$. The resulting state of the system is
+\begin{align}\label{eq:stinesrping}
+\rho \rightarrow& \text{Tr}_A\left[\hat{U} \rho \otimes \proj{0_A} \hat{U}^\dagger\right] \\
+=& \sum_{k=1}^N \langle k_A| \Big( \hat{U} \ket{0_A} \rho \bra{0_A} \hat{U}^\dagger \Big) \ket{k_A}\\
+=& \sum_{k=1}^N M_k \rho M_k^\dagger,
+\end{align}
+where we defined $M_k = \langle k_A|\hat{U} \ket{0_A}$ by considering a basis $\llaves{\ket{k_A}}_{k=1}^N$ of the ancilla. However, we can readily note that a different basis $\llaves{\ket{\nu_A}}_{k=1}^{N'}$ (of a possibly enlarged) ancilla could be considered, where the basis-elements are related to each other by an isometry $\hat{V}$ such that $\ket{\nu} = \sum_{l=1}^{N} V_{\nu k}\ket{k}$. Using the latter basis, the two sets of Krauss operators relate to each other as $N_\nu = \sum_{l=1}^{N} V^\dagger_{\nu k} M_k$.
+
+Morever, note that the map $\Phi$ will be trace-preserving iff $\sum_{k=1}^N M^\dagger_k M_k = \mathbb{I}$. Also, we remark that as long as Eq.~\ref{eq:compKraus} is satisfied, the Krauss operators can also be time-dependent~\cite{manzano2019}.
+
+As an example, we can consider an unitary channel as in Eq.~\ref{eq:schro}, where the Krauss representation reduces to $M_k = \hat{U}_t$, with $N=1$.
+
+\subsection{Generalized quantum measurements}\label{ssec:1_intro_qmeas}
+
+A generalized quantum measurement given by a set of lineal operators $\llaves{E_k}_{k=1}^n$, each associated to a possible outcome $k \in \llaves{1,...,n}$. The probablity that outcome $k$ happens, conditioned on the quantum state being $\rho$, is given by the Born rule: \eq{bornrule}{p(k|\rho) = \tr{\rho E_k}.} Since such probability is required to be positive for any quantum state, it follows that $E_k\geq0$ (which imply self-adjointness). Moreover, since $\sum_k p(k|\rho) = 1$ for any quantum state, then $\sum_k E_k = \id_d$. This constitute a \textit{Positive Operator-Valued Measure (POVM)}, which we will often denote by $\mathcal{M}$.
+
+POVMs arise when a projective measurement is carried out on an ancilla that the system is coupled with. Similarly to our previous discussion on quantum channels\footnote{In fact, measurements can be regarded as quantum-to-classical channels~\cite{watrous_2018}}, we can readily define an ancilla system $A$, with an associated eigen-basis $\llaves{\ket{k_A}}_{k=1}^n$. Now, considering the initial-state of the system and ancilla to be $\rho_S$ and $\proj{0_A}$ respectively, and the joint unitary evolution to be $\hat{U}$, a projective measurement $\llaves{\proj{k_A}}$ carried out on sub-system $A$ will occur with probability \equ{p(k) = \tr{(\id_d \otimes \proj{k_A}) \rho_s \otimes \proj{0_A}} = \tr{\rho M_k^\dagger M_k} = \tr{\rho E_k},}
+where similarly to the previous Section we have $M_k=\langle k_A|\hat{U}\ket{0}$. Thus, under this Krauss decomposition we have that $E_k = M_k^\dagger M_k$, and the conditional state of $\rho$ upon obtaining measurement outcome $k$ reads
+\equ{\rho \rightarrow \rho_{|k} = \frac{M_k \rho M_k^\dagger}{\tr{\rho M_k^\dagger M_k}}.}Similarly, the unconditional post-measurement state under such Krauss decomposition reads
+\eq{measurementdynamics}{\rho \rightarrow \sum_k^n M_k \rho M^\dagger_k.}It is important to recall that this decomposition is not unique, since different Krauss decompositions are equivalent by an isometry, as discussed in the previous Section. In turn, Eq.~\ref{eq:measurementdynamics} can be understood as a quantum channel acting on $\rho$, similar to Eq.~\ref{eq:compKraus}. In this direction, it is useful to understand different Krauss decompositions as different \textit{unravelings} of the open-quantum system dynamics, all averaging up to the same unconditional evolution.
+
+The notion of quantum measurements and channels can be generalize to take into account stochastic channels, using the concept of a quantum instrument~\cite{watrous_2018} ,or quantum operation~\cite{Preskill1998}, which we now turn to introduce.
+\subsection{Quantum instruments}\label{ssec:1_intro_operations}
+A quantum instrument is described by a collection of CP maps $\llaves{\phi_k}_{k=1}^n$, which sum up to a channel, \textit{i.e.} $\Phi = \sum_k \phi_k$. Such object is to be considered as a generalization of a POVM: after applying a quantum instrument on a state $\rho$, two things happen:\begin{itemize}\item A measurement outcome $k$ is obtained with probability $\tr{\phi_k(\rho) }$,\item The conditional state of $\rho$ upon observing measurement outcome $k$ is \equ{\rho \rightarrow \frac{\phi_k(\rho)}{\tr{\phi_k(\rho)}}.}\end{itemize}
+We can readily consider a krauss decomposition of $\phi_k$, given by $\llaves{M_{k \mu}}$. Such Krauss operators should obey the completeness relation derived above, namely $\sum_{k \mu} M^\dagger_{k \mu} M_{k \mu} = \id$. Here, we can interpret the quantum instrument as an object describing an stochastic application of $\phi_k$: whereas $k$ is recorded, the label $\mu$ is ignored. As such, the post-measurement state reads\equ{\phi_k(\rho) = \sum_\mu M_{k\mu}\rho M_{k\mu}^\dagger,}with outcome $k$ occuring with probability $p(k) = \tr{\phi_k(\rho)}$. We note that since outcome $\mu$ is ignored, the channel $\phi_k$ is generally trace-decreasing, and the normalized post-measurement state coincides with the post-measurement state defined above as $\rho_{|k} = \frac{\phi_k(\rho)}{\tr{\phi_k(\rho)}}$.
+
+Moreover, we might think of a process that consists on $M$ consecutive measurements, leading to an stochastic sequence $\bm{k} = \llaves{k_1, ..., k_j,... k_M}$. The conditional state of the system upon observing outcome $k_j$ is obtained via $\phi_{k_j}$. Note that when keeping the system's state unnormalized up to the $M$-outcome, the trace of the unnormalized state, \textit{i.e.} $\phi_{k_M} \circ....\circ \phi_{k_1} (\rho)$, represents the likelihood of observing such sequence of outcomes, and the normalized state reads:
+\equ{\rho_{|\bm{k}} = \frac{\phi_M \circ....\circ \phi_1 (\rho)}{\tr{\phi_{k_M} \circ....\circ \phi_{k_1} (\rho)}}.}
+
+Our discussion has so-far limited to discrete changes of the quantum state. In the following we will discuss how a dynamical equation is obtained for the (unconditional) evolution of an open-quantum system.
+\subsection{Quantum master equation}\label{ssec:1_intro_open}
+
+While we have previously introduced the notion of a quantum channel given by a CPTP map between quantum states, no notion of continuous-time has entered so-far in the discussion. Thus, we will here consider a quantum channel $\cE _t$, and discuss a dynamical equation accounting for $\rho(t)  = \cE _t[\rho(0)]$. In the Markov approximation, this can be expressed as a differential equation of the form
+\equ{d\rho = \cL[\rho] dt,}
+where $\cL$ is a superoperator that generates the \textit{quantum dynamical semi-group}
+\footnote{A quantum dynamical semi-group consists on a family of CPTP maps $\llaves{{\cE}_t:t\geq0}$ such that \textit{(i)} $\cE _t \cE _s=\cE _{t+s}$ and \textit{(ii)} $\tr{\cE _t [\rho] \hat{O}}$ is continuous over $t$, for any state-observable pair $(\rho, \hat{O})$. Note that the first restriction is quite restrictive, since an aritrary evolution might not admit such decomposition.}
+associated to $\cE _t$ and can be shown to admit the so-called \textit{Lindblad form}~\cite{libland1976, wisemanbook, manzano2019}:
+\begin{equation}\label{eq:libland}
+\cL(\rho)= -\ii\comm{\hat{H}}{\rho} +  \sum_{k=1}^{M} \cD[\hatL_k]\rho, \spacee \cD[\hatL_k]\rho = \hatL_k \rho + \rho \hatL_k^\dagger - \frac{1}{2}\llaves{\hatL_k \hatL_k^\dagger, \rho},
+\end{equation}
+where $\hat{H}$ is the system Hamiltonian (generator of the closed-system dynamics) and the linearly-independent operators $\llaves{L_k}$ are known as the \textit{Lindblad operators}, or \textit{jump operators}. We note that the Lindblad form is invariant under \textit{(i)} unitary transformations of the jump operators, \textit{i.e.} $\hatL_k \rightarrow \sum_l \hat{V}_{kl}\hatL_l$ with $\hat{V}$ unitary (which is a consequence of the unitary invariance of the Krauss decomposition), and
+\textit{(ii)} shifts of the Lindblad operators accompanied by a new term in the Hamiltonian:
+\begin{equation}\label{eq:invalibland}
+\hatL_k \rightarrow \hatL_k + \xi_k, \spacee \hat{H} \rightarrow \hat{H} - \frac{\ii}{2}\sum_{i=1}^M \xi_k^* \hatL_k - \xi_k {{\hatL}^\dagger}_k.
+\end{equation}
+The dynamical equation introduced above is known as the \textit{quantum master equation}, and its generator is given by Eq.~\ref{eq:libland}. We remark that this evolution can also be obtained by suitable time-dependent Krauss operators:
+\begin{align}\label{eq:ravel}
+\rho(t+dt) = \cE_{dt}[\rho(t)] =& \rho + \sum_{k=1}^M K_k(dt) \rho K^\dagger _k(dt) \\
+=& \rho + \cL[\rho] dt.
+\end{align}
+As discussed in Sec.~\ref{ssec:1_intro_qmeas}, the choice of Krauss and jump operators $K_k(dt)$ in Eq.~\ref{eq:ravel} plays an imporant role when studying the \textit{conditional} dynamics, arising as a consequence of recording the measurement outcome at each time-step. This can be understood as an stochastic sequence of channels, as introduced in Sec.~\ref{ssec:1_intro_operations}, which give rise to the notion of a \textit{quantum-trajectory}, as discussed in Sec.~\ref{sec:1_cmon}.
+
+\vspace{2cm}
+To conclude, in this Section we have revisted some of the basics in quantum information theory. Many of the concepts discussed here will be recaped later in the thesis. We will now turn to introduce some of the physics and concepts that set the basis for Chapter~\ref{chapter:VANS}.

@@ -1,0 +1,2 @@
+
+While the measurements introduced above stand for \textit{one-shot}, revisting the so-called continuously-monitored sceario is of utmost importance for this thesis. In such case, the CV system is stored in \textit{e.g.} an optical cavity, whereas an external field is used to probe the system in a continuous way. As we shall see, the state of the system is subject not only to its (open) dynamics, but also to a conditional evolution that depends on the (continuously obtained) measurement outcomes.

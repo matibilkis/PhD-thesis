@@ -1,0 +1,769 @@
+
+@Article{classiVQA,
+	title={{Quantum Neural Network Classifiers: A Tutorial}},
+	author={Weikang Li and Zhide Lu and Dong-Ling Deng},
+	journal={SciPost Phys. Lect. Notes},
+	pages={61},
+	year={2022},
+	publisher={SciPost},
+	doi={10.21468/SciPostPhysLectNotes.61},
+	url={https://scipost.org/10.21468/SciPostPhysLectNotes.61},
+}
+
+@book{Goodfellow-et-al-2016,
+    title={Deep Learning},
+    author={Ian Goodfellow and Yoshua Bengio and Aaron Courville},
+    publisher={MIT Press},
+    note={\url{http://www.deeplearningbook.org}},
+    year={2016}
+}
+
+@article{cvnetworks,
+  title = {Continuous-variable quantum neural networks},
+  author = {Killoran, Nathan and Bromley, Thomas R. and Arrazola, Juan Miguel and Schuld, Maria and Quesada, Nicol\'as and Lloyd, Seth},
+  journal = {Phys. Rev. Research},
+  volume = {1},
+  issue = {3},
+  pages = {033063},
+  numpages = {22},
+  year = {2019},
+  month = {Oct},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevResearch.1.033063},
+  url = {https://link.aps.org/doi/10.1103/PhysRevResearch.1.033063}
+}
+
+
+@misc{vqaclass1,
+Author = {Edward Farhi and Hartmut Neven},
+Title = {Classification with Quantum Neural Networks on Near Term Processors},
+Year = {2018},
+Eprint = {arXiv:1802.06002},
+}
+
+@Article{Moro2021,
+author={Moro, Lorenzo
+and Paris, Matteo G. A.
+and Restelli, Marcello
+and Prati, Enrico},
+title={Quantum compiling by deep reinforcement learning},
+journal={Communications Physics},
+year={2021},
+month={Aug},
+day={06},
+volume={4},
+number={1},
+pages={178},
+abstract={The general problem of quantum compiling is to approximate any unitary transformation that describes the quantum computation as a sequence of elements selected from a finite base of universal quantum gates. The Solovay-Kitaev theorem guarantees the existence of such an approximating sequence. Though, the solutions to the quantum compiling problem suffer from a tradeoff between the length of the sequences, the precompilation time, and the execution time. Traditional approaches are time-consuming, unsuitable to be employed during computation. Here, we propose a deep reinforcement learning method as an alternative strategy, which requires a single precompilation procedure to learn a general strategy to approximate single-qubit unitaries. We show that this approach reduces the overall execution time, improving the tradeoff between the length of the sequence and execution time, potentially allowing real-time operations.},
+issn={2399-3650},
+doi={10.1038/s42005-021-00684-3},
+url={https://doi.org/10.1038/s42005-021-00684-3}
+}
+
+@article{RevModPhys.92.015003,
+  title = {Quantum computational chemistry},
+  author = {McArdle, Sam and Endo, Suguru and Aspuru-Guzik, Al\'an and Benjamin, Simon C. and Yuan, Xiao},
+  journal = {Rev. Mod. Phys.},
+  volume = {92},
+  issue = {1},
+  pages = {015003},
+  numpages = {51},
+  year = {2020},
+  month = {Mar},
+  publisher = {American Physical Society},
+  doi = {10.1103/RevModPhys.92.015003},
+  url = {https://link.aps.org/doi/10.1103/RevModPhys.92.015003}
+}
+
+@misc{wikiAD,
+   author = "Wikipedia",
+   title = "{Automatic differentiation} --- {W}ikipedia{,} The Free Encyclopedia",
+   year = "2023",
+   howpublished = {\url{http://en.wikipedia.org/w/index.php?title=Automatic\%20differentiation&oldid=1149933866}},
+   note = "[Online; accessed 18-April-2023]"
+ }
+
+ @inproceedings{maclaurinautograd,
+     title = {Autograd: Effortless Gradients in Numpy},
+     author = {Maclaurin, Dougal and Duvenaud, David and Adams, Ryan P},
+     year = {2015},
+     booktitle = {ICML 2015 AutoML Workshop},
+     url = {/bib/maclaurin/maclaurinautograd/automl-short.pdf,https://indico.lal.in2p3.fr/event/2914/session/1/contribution/6/3/material/paper/0.pdf,https://github.com/HIPS/autograd},
+     keywords = {knet},
+ }
+
+ @phdthesis{maclaurin2016phd,
+     author = {Maclaurin, Dougal},
+     title = {Modeling, Inference and Optimization  with Composable Differentiable  Procedures},
+     school = {Harvard University},
+     year = {2016},
+     month = {April},
+     url = {/bib/maclaurin/maclaurin2016phd/thesis.pdf},
+     keywords = {knet},
+ }
+
+
+ @article{survey_ad,
+ 	author = {Atilim Gunes Baydin and Barak A. Pearlmutter and Alexey Andreyevich Radul and Jeffrey Mark Siskind},
+ 	journal = {Journal of Machine Learning Research},
+ 	number = {153},
+ 	pages = {1--43},
+ 	title = {Automatic Differentiation in Machine Learning: a Survey},
+ 	url = {http://jmlr.org/papers/v18/17-468.html},
+ 	volume = {18},
+ 	year = {2018},
+ 	bdsk-url-1 = {http://jmlr.org/papers/v18/17-468.html}}
+
+
+@misc{supercomi,
+Author = {Nils Quetschlich and Lukas Burgholzer and Robert Wille},
+Title = {Predicting Good Quantum Circuit Compilation Options},
+Year = {2022},
+Eprint = {arXiv:2210.08027},
+}
+@Article{vqaclass4,
+author={Beer, Kerstin
+and Bondarenko, Dmytro
+and Farrelly, Terry
+and Osborne, Tobias J.
+and Salzmann, Robert
+and Scheiermann, Daniel
+and Wolf, Ramona},
+title={Training deep quantum neural networks},
+journal={Nature Communications},
+year={2020},
+month={Feb},
+day={10},
+volume={11},
+number={1},
+pages={808},
+abstract={Neural networks enjoy widespread success in both research and industry and, with the advent of quantum technology, it is a crucial challenge to design quantum neural networks for fully quantum learning tasks. Here we propose a truly quantum analogue of classical neurons, which form quantum feedforward neural networks capable of universal quantum computation. We describe the efficient training of these networks using the fidelity as a cost function, providing both classical and efficient quantum implementations. Our method allows for fast optimisation with reduced memory requirements: the number of qudits required scales with only the width, allowing deep-network optimisation. We benchmark our proposal for the quantum task of learning an unknown unitary and find remarkable generalisation behaviour and a striking robustness to noisy training data.},
+issn={2041-1723},
+doi={10.1038/s41467-020-14454-2},
+url={https://doi.org/10.1038/s41467-020-14454-2}
+}
+
+
+
+
+@article{volkoffuniversal,
+
+  title = {Universal Compiling and (No-)Free-Lunch Theorems for Continuous-Variable Quantum Learning},
+  author = {Volkoff, Tyler and Holmes, Zo\"e and Sornborger, Andrew},
+  journal = {PRX Quantum},
+  volume = {2},
+  issue = {4},
+  pages = {040327},
+  numpages = {20},
+  year = {2021},
+  month = {Nov},
+  publisher = {American Physical Society},
+  doi = {10.1103/PRXQuantum.2.040327},
+  url = {https://link.aps.org/doi/10.1103/PRXQuantum.2.040327}
+}
+
+
+
+@article{HerreraMarti2022policygradient,
+  doi = {10.22331/q-2022-09-08-797},
+  url = {https://doi.org/10.22331/q-2022-09-08-797},
+  title = {Policy {G}radient {A}pproach to {C}ompilation of {V}ariational {Q}uantum {C}ircuits},
+  author = {Herrera-Mart{\'{i}}, David A.},
+  journal = {{Quantum}},
+  issn = {2521-327X},
+  publisher = {{Verein zur F{\"{o}}rderung des Open Access Publizierens in den Quantenwissenschaften}},
+  volume = {6},
+  pages = {797},
+  month = sep,
+  year = {2022}
+}
+
+
+@article{Biamonte2017tensornetworks,
+    author = "Biamonte, Jacob and Bergholm, Ville",
+    title = "{Tensor Networks in a Nutshell}",
+    eprint = "1708.00006",
+    archivePrefix = "arXiv",
+    primaryClass = "quant-ph",
+    month = "7",
+    year = "2017"
+}
+
+@Article{orusTN,
+author={Or{\'u}s, Rom{\'a}n},
+title={Tensor networks for complex quantum systems},
+journal={Nature Reviews Physics},
+year={2019},
+month={Sep},
+day={01},
+volume={1},
+number={9},
+pages={538-550},
+abstract={Originally developed in the context of condensed-matter physics and based on renormalization group ideas, tensor networks have been revived thanks to quantum information theory and the progress in understanding the role of entanglement in quantum many-body systems. Moreover, tensor network states have turned out to play a key role in other scientific disciplines. In this context, here I provide an overview of the basic concepts and key developments in the field. I briefly discuss the most important tensor network structures and algorithms, together with an outline of advances related to global and gauge symmetries, fermions, topological order, classification of phases, entanglement Hamiltonians, holografic duality, artificial intelligence, the 2D Hubbard model, 2D quantum antiferromagnets, conformal field theory, quantum chemistry, disordered systems and many-body localization.},
+issn={2522-5820},
+doi={10.1038/s42254-019-0086-7},
+url={https://doi.org/10.1038/s42254-019-0086-7}
+}
+@article{shiftrules2,
+  title = {Evaluating analytic gradients on quantum hardware},
+  author = {Schuld, Maria and Bergholm, Ville and Gogolin, Christian and Izaac, Josh and Killoran, Nathan},
+  journal = {Phys. Rev. A},
+  volume = {99},
+  issue = {3},
+  pages = {032331},
+  numpages = {7},
+  year = {2019},
+  month = {Mar},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevA.99.032331},
+  url = {https://link.aps.org/doi/10.1103/PhysRevA.99.032331}
+}
+
+@misc{viterbinet,
+Author = {Nir Shlezinger and Nariman Farsad and Yonina C. Eldar and Andrea J. Goldsmith},
+Title = {ViterbiNet: A Deep Learning Based Viterbi Algorithm for Symbol Detection},
+Year = {2019},
+Eprint = {arXiv:1905.10750},
+}
+
+@misc{blackbox,
+Author = {Vishal Monga and Yuelong Li and Yonina C. Eldar},
+Title = {Algorithm Unrolling: Interpretable, Efficient Deep Learning for Signal and Image Processing},
+Year = {2019},
+Eprint = {arXiv:1912.10557},
+}
+
+@article{Luo2020yaojlextensible,
+  doi = {10.22331/q-2020-10-11-341},
+  url = {https://doi.org/10.22331/q-2020-10-11-341},
+  title = {Yao.jl: {E}xtensible, {E}fficient {F}ramework for {Q}uantum {A}lgorithm {D}esign},
+  author = {Luo, Xiu-Zhe and Liu, Jin-Guo and Zhang, Pan and Wang, Lei},
+  journal = {{Quantum}},
+  issn = {2521-327X},
+  publisher = {{Verein zur F{\"{o}}rderung des Open Access Publizierens in den Quantenwissenschaften}},
+  volume = {4},
+  pages = {341},
+  month = oct,
+  year = {2020}
+}
+
+@article{shiftrules1,
+  title = {Quantum circuit learning},
+  author = {Mitarai, K. and Negoro, M. and Kitagawa, M. and Fujii, K.},
+  journal = {Phys. Rev. A},
+  volume = {98},
+  issue = {3},
+  pages = {032309},
+  numpages = {6},
+  year = {2018},
+  month = {Sep},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevA.98.032309},
+  url = {https://link.aps.org/doi/10.1103/PhysRevA.98.032309}
+}
+
+@article{Liao2019differentaible,
+  title = {Differentiable Programming Tensor Networks},
+  author = {Liao, Hai-Jun and Liu, Jin-Guo and Wang, Lei and Xiang, Tao},
+  journal = {Phys. Rev. X},
+  volume = {9},
+  issue = {3},
+  pages = {031041},
+  numpages = {12},
+  year = {2019},
+  month = {Sep},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevX.9.031041},
+  url = {https://link.aps.org/doi/10.1103/PhysRevX.9.031041}
+}
+
+
+@article{dpcontrolsto,
+	abstract = {Control of the stochastic dynamics of a quantum system is indispensable in fields such as quantum information processing and metrology. However, there is no general ready-made approach to the design of efficient control strategies. Here, we propose a framework for the automated design of control schemes based on differentiable programming. We apply this approach to the state preparation and stabilization of a qubit subjected to homodyne detection. To this end, we formulate the control task as an optimization problem where the loss function quantifies the distance from the target state, and we employ neural networks (NNs) as controllers. The system's time evolution is governed by a stochastic differential equation (SDE). To implement efficient training, we backpropagate the gradient information from the loss function through the SDE solver using adjoint sensitivity methods. As a first example, we feed the quantum state to the controller and focus on different methods of obtaining gradients. As a second example, we directly feed the homodyne detection signal to the controller. The instantaneous value of the homodyne current contains only very limited information on the actual state of the system, masked by unavoidable photon-number fluctuations. Despite the resulting poor signal-to-noise ratio, we can train our controller to prepare and stabilize the qubit to a target state with a mean fidelity of around 85{\%}. We also compare the solutions found by the NN to a hand-crafted control strategy.},
+	author = {Sch{\"a}fer, Frank and Sekatski, Pavel and Koppenh{\"o}fer, Martin and Bruder, Christoph and Kloc, Michal},
+	date = {2021/04/22},
+	date-added = {2022-11-28 01:33:32 +0100},
+	date-modified = {2022-11-28 01:33:32 +0100},
+	doi = {10.1088/2632-2153/abec22},
+	isbn = {2632-2153; },
+	journal = {Machine Learning: Science and Technology},
+	number = {3},
+	pages = {035004},
+	publisher = {IOP Publishing},
+	title = {Control of stochastic quantum dynamics by differentiable programming},
+	url = {https://dx.doi.org/10.1088/2632-2153/abec22},
+	volume = {2},
+	year = {2021},
+	bdsk-url-1 = {https://dx.doi.org/10.1088/2632-2153/abec22}}
+
+
+@inproceedings{Rackauckas2020GeneralizedPL,
+  title={Generalized Physics-Informed Learning through Language-Wide Differentiable Programming},
+  author={Christopher Rackauckas and Alan Edelman and Keno Fischer and Mike Innes and Elliot Saba and Viral B. Shah and Will Tebbutt},
+  booktitle={AAAI Spring Symposium: MLPS},
+  year={2020}
+}
+
+@article{Wierichs2022generalparameter,
+  doi = {10.22331/q-2022-03-30-677},
+  url = {https://doi.org/10.22331/q-2022-03-30-677},
+  title = {General parameter-shift rules for quantum gradients},
+  author = {Wierichs, David and Izaac, Josh and Wang, Cody and Lin, Cedric Yen-Yu},
+  journal = {{Quantum}},
+  issn = {2521-327X},
+  publisher = {{Verein zur F{\"{o}}rderung des Open Access Publizierens in den Quantenwissenschaften}},
+  volume = {6},
+  pages = {677},
+  month = mar,
+  year = {2022}
+}
+
+@article{Sweke2020,
+  doi = {10.22331/q-2020-08-31-314},
+  url = {https://doi.org/10.22331/q-2020-08-31-314},
+  year = {2020},
+  month = aug,
+  publisher = {Verein zur Forderung des Open Access Publizierens in den Quantenwissenschaften},
+  volume = {4},
+  pages = {314},
+  author = {Ryan Sweke and Frederik Wilde and Johannes Meyer and Maria Schuld and Paul K. Faehrmann and Barth{\'{e}}l{\'{e}}my Meynard-Piganeau and Jens Eisert},
+  title = {Stochastic gradient descent for hybrid quantum-classical optimization},
+  journal = {Quantum}
+}
+
+
+
+@article{vqaclass2,
+  title = {Circuit-centric quantum classifiers},
+  author = {Schuld, Maria and Bocharov, Alex and Svore, Krysta M. and Wiebe, Nathan},
+  journal = {Phys. Rev. A},
+  volume = {101},
+  issue = {3},
+  pages = {032308},
+  numpages = {8},
+  year = {2020},
+  month = {Mar},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevA.101.032308},
+  url = {https://link.aps.org/doi/10.1103/PhysRevA.101.032308}
+}
+
+
+@article{gu2021adaptive,
+Author = {Andi Gu and Angus Lowe and Pavel A. Dub and Patrick J. Coles and Andrew Arrasmith},
+Title = {Adaptive shot allocation for fast convergence in variational quantum algorithms},
+Year = {2021},
+Eprint = {arXiv:2108.10434},
+Doi = {10.48550/arXiv.2108.10434},
+}
+
+@article{borrowed,
+  doi = {10.22331/q-2019-10-07-191},
+  url = {https://doi.org/10.22331/q-2019-10-07-191},
+  title = {Theory of variational quantum simulation},
+  author = {Yuan, Xiao and Endo, Suguru and Zhao, Qi and Li, Ying and Benjamin, Simon C.},
+  journal = {{Quantum}},
+  issn = {2521-327X},
+  publisher = {{Verein zur F{\"{o}}rderung des Open Access Publizierens in den Quantenwissenschaften}},
+  volume = {3},
+  pages = {191},
+  month = oct,
+  year = {2019}
+}
+
+@Article{Aaronson2015,
+author={Aaronson, Scott},
+title={Read the fine print},
+journal={Nature Physics},
+year={2015},
+month={Apr},
+day={01},
+volume={11},
+number={4},
+pages={291-293},
+abstract={New quantum algorithms promise an exponential speed-up for machine learning, clustering and finding patterns in big data. But to achieve a real speed-up, we need to delve into the details.},
+issn={1745-2481},
+doi={10.1038/nphys3272},
+url={https://doi.org/10.1038/nphys3272}
+}
+
+
+@article{npHardVQA,
+  title = {Training Variational Quantum Algorithms Is NP-Hard},
+  author = {Bittel, Lennart and Kliesch, Martin},
+  journal = {Phys. Rev. Lett.},
+  volume = {127},
+  issue = {12},
+  pages = {120502},
+  numpages = {6},
+  year = {2021},
+  month = {Sep},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.127.120502},
+  url = {https://link.aps.org/doi/10.1103/PhysRevLett.127.120502}
+}
+
+@article{pesah2021absense,
+  title = {Absence of Barren Plateaus in Quantum Convolutional Neural Networks},
+  author = {Pesah, Arthur and Cerezo, M. and Wang, Samson and Volkoff, Tyler and Sornborger, Andrew T. and Coles, Patrick J.},
+  journal = {Phys. Rev. X},
+  volume = {11},
+  issue = {4},
+  pages = {041011},
+  numpages = {26},
+  year = {2021},
+  month = {Oct},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevX.11.041011},
+  url = {https://link.aps.org/doi/10.1103/PhysRevX.11.041011}
+}
+
+@article{schuld2021isquantum,
+  title = {Is Quantum Advantage the Right Goal for Quantum Machine Learning?},
+  author = {Schuld, Maria and Killoran, Nathan},
+  journal = {PRX Quantum},
+  volume = {3},
+  issue = {3},
+  pages = {030101},
+  numpages = {13},
+  year = {2022},
+  month = {Jul},
+  publisher = {American Physical Society},
+  doi = {10.1103/PRXQuantum.3.030101},
+  url = {https://link.aps.org/doi/10.1103/PRXQuantum.3.030101}
+}
+
+@article{polemic1,
+Author = {Michal Krelina},
+Title = {Quantum Technology for Military Applications},
+Year = {2021},
+Eprint = {arXiv:2103.12548},
+Howpublished = {EPJ Quantum Technol. 8, 24 (2021)},
+Doi = {10.1140/epjqt/s40507-021-00113-y},
+}
+
+@MastersThesis{compilingDeepRLmaster,
+    author     =     { Griend, van de Arianne },
+    title     =     {{ Constrained quantum CNOT circuit re-synthesis using deep reinforcement learning }},
+    school     =     {Rijksuniversiteit Groningen},
+    address     =     { Faculteit der Sociale Wetenschappen },
+    year     =     {2019},
+    }
+
+@misc{polemic2,
+Author = {Niels M. P. Neumann and Maran P. P. van Heesch and Patrick de Graaf},
+Title = {Quantum Communication for Military Applications},
+Year = {2020},
+Eprint = {arXiv:2011.04989},
+}
+
+@article{sharma2022reformulation,
+  title = {Reformulation of the No-Free-Lunch Theorem for Entangled Datasets},
+  author = {Sharma, Kunal and Cerezo, M. and Holmes, Zo\"e and Cincio, Lukasz and Sornborger, Andrew and Coles, Patrick J.},
+  journal = {Phys. Rev. Lett.},
+  volume = {128},
+  issue = {7},
+  pages = {070501},
+  numpages = {7},
+  year = {2022},
+  month = {Feb},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.128.070501},
+  url = {https://link.aps.org/doi/10.1103/PhysRevLett.128.070501}
+}
+
+
+
+@article{separableAnna,
+  title = {Volume of the set of separable states},
+  author = {Zyczkowski, Karol and Horodecki, Pawel and Sanpera, Anna and Lewenstein, Maciej},
+  journal = {Phys. Rev. A},
+  volume = {58},
+  issue = {2},
+  pages = {883--892},
+  numpages = {0},
+  year = {1998},
+  month = {Aug},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevA.58.883},
+  url = {https://link.aps.org/doi/10.1103/PhysRevA.58.883}
+}
+
+
+
+@article{CNN,
+title = "Learning methods for generic object recognition with invariance to pose and lighting",
+abstract = "We assess the applicability of several popular learning methods for the problem of recognizing generic visual categories with invariance to pose, lighting, and surrounding clutter. A large dataset comprising stereo image pairs of 50 uniform-colored toys under 36 azimuths, 9 elevations, and 6 lighting conditions was collected (for a total of 194,400 individual images). The objects were 10 instances of 5 generic categories: four-legged animals, human figures, airplanes, trucks, and cars. Five instances of each category were used for training, and the other five for testing. Low-resolution grayscale images of the objects with various amounts of variability and surrounding clutter were used for training and testing. Nearest Neighbor methods, Support Vector Machines, and Convolutional Networks, operating on raw pixels or on PCA-derived features were tested. Test error rates for unseen object instances placed on uniform backgrounds were around 13% for SVM and 7% for Convolutional Nets. On a segmentation/recognition task with highly cluttered images, SVM proved impractical, while Convolutional nets yielded 16/7% error. A real-time version of the system was implemented that can detect and classify objects in natural scenes at around 10 frames per second.",
+author = "Yann LeCun and Huang, {Fu Jie} and L{\'e}on Bottou",
+year = "2004",
+language = "English (US)",
+volume = "2",
+pages = "II97--II104",
+journal = "Proceedings of the IEEE Computer Society Conference on Computer Vision and Pattern Recognition",
+issn = "1063-6919",
+publisher = "IEEE Computer Society",
+note = "Proceedings of the 2004 IEEE Computer Society Conference on Computer Vision and Pattern Recognition, CVPR 2004 ; Conference date: 27-06-2004 Through 02-07-2004",
+
+}
+
+
+@Article{Cong2019,
+author={Cong, Iris
+and Choi, Soonwon
+and Lukin, Mikhail D.},
+title={Quantum convolutional neural networks},
+journal={Nature Physics},
+year={2019},
+month={Dec},
+day={01},
+volume={15},
+number={12},
+pages={1273-1278},
+abstract={Neural network-based machine learning has recently proven successful for many complex applications ranging from image recognition to precision medicine. However, its direct application to problems in quantum physics is challenging due to the exponential complexity of many-body systems. Motivated by recent advances in realizing quantum information processors, we introduce and analyse a quantum circuit-based algorithm inspired by convolutional neural networks, a highly effective model in machine learning. Our quantum convolutional neural network (QCNN) uses only O(log(N)) variational parameters for input sizes of N qubits, allowing for its efficient training and implementation on realistic, near-term quantum devices. To explicitly illustrate its capabilities, we show that QCNNs can accurately recognize quantum states associated with a one-dimensional symmetry-protected topological phase, with performance surpassing existing approaches. We further demonstrate that QCNNs can be used to devise a quantum error correction scheme optimized for a given, unknown error model that substantially outperforms known quantum codes of comparable complexity. The potential experimental realizations and generalizations of QCNNs are also discussed.},
+issn={1745-2481},
+doi={10.1038/s41567-019-0648-8},
+url={https://doi.org/10.1038/s41567-019-0648-8}
+}
+
+
+
+
+@misc{CNN2,
+Author = {Keiron O'Shea and Ryan Nash},
+Title = {An Introduction to Convolutional Neural Networks},
+Year = {2015},
+Eprint = {arXiv:1511.08458},
+}
+@inproceedings{CNN1,
+	author = {Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
+	booktitle = {Advances in Neural Information Processing Systems},
+	editor = {F. Pereira and C.J. Burges and L. Bottou and K.Q. Weinberger},
+	publisher = {Curran Associates, Inc.},
+	title = {ImageNet Classification with Deep Convolutional Neural Networks},
+	url = {https://proceedings.neurips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf},
+	volume = {25},
+	year = {2012},
+	bdsk-url-1 = {https://proceedings.neurips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf}}
+
+
+
+
+@article{Romero2019strategies,
+	abstract = {The variational quantum eigensolver (VQE) algorithm combines the ability of quantum computers to efficiently compute expectation values with a classical optimization routine in order to approximate ground state energies of quantum systems. In this paper, we study the application of VQE to the simulation of molecular energies using the unitary coupled cluster (UCC) ansatz. We introduce new strategies to reduce the circuit depth for the implementation of UCC and improve the optimization of the wavefunction based on efficient classical approximations of the cluster amplitudes. Additionally, we propose an analytical method to compute the energy gradient that reduces the sampling cost for gradient estimation by several orders of magnitude compared to numerical gradients. We illustrate our methodology with numerical simulations for a system of four hydrogen atoms that exhibit strong correlation and show that the circuit depth of VQE using a UCC ansatz can be reduced without introducing significant loss of accuracy in the final wavefunctions and energies.},
+	author = {Jonathan Romero and Ryan Babbush and Jarrod R McClean and Cornelius Hempel and Peter J Love and Al{\'a}n Aspuru-Guzik},
+	doi = {10.1088/2058-9565/aad3e4},
+	journal = {Quantum Science and Technology},
+	month = {oct},
+	number = {1},
+	pages = {014008},
+	publisher = {IOP Publishing},
+	title = {Strategies for quantum computing molecular energies using the unitary coupled cluster ansatz},
+	url = {https://dx.doi.org/10.1088/2058-9565/aad3e4},
+	volume = {4},
+	year = {2018},
+	bdsk-url-1 = {https://dx.doi.org/10.1088/2058-9565/aad3e4}}
+
+
+
+@misc{algorithmiq2
+Author = {Adam Glos and Anton Nykänen and Elsi-Mari Borrelli and Sabrina Maniscalco and Matteo A. C. Rossi and Zoltán Zimborás and Guillermo García-Pérez},
+Title = {Adaptive POVM implementations and measurement error mitigation strategies for near-term quantum devices},
+Year = {2022},
+Eprint = {arXiv:2208.07817},
+}
+@article{algorithmiq1,
+  title = {Learning to Measure: Adaptive Informationally Complete Generalized Measurements for Quantum Algorithms},
+  author = {Garc\'{\i}a-P\'erez, Guillermo and Rossi, Matteo A.C. and Sokolov, Boris and Tacchino, Francesco and Barkoutsos, Panagiotis Kl. and Mazzola, Guglielmo and Tavernelli, Ivano and Maniscalco, Sabrina},
+  journal = {PRX Quantum},
+  volume = {2},
+  issue = {4},
+  pages = {040342},
+  numpages = {17},
+  year = {2021},
+  month = {Nov},
+  publisher = {American Physical Society},
+  doi = {10.1103/PRXQuantum.2.040342},
+  url = {https://link.aps.org/doi/10.1103/PRXQuantum.2.040342}
+}
+
+@Article{supremacygoogle,
+author={Arute, Frank
+and Arya, Kunal
+and Babbush, Ryan
+and Bacon, Dave
+and Bardin, Joseph C.
+and Barends, Rami
+and Biswas, Rupak
+and Boixo, Sergio
+and Brandao, Fernando G. S. L.
+and Buell, David A.
+and Burkett, Brian
+and Chen, Yu
+and Chen, Zijun
+and Chiaro, Ben
+and Collins, Roberto
+and Courtney, William
+and Dunsworth, Andrew
+and Farhi, Edward
+and Foxen, Brooks
+and Fowler, Austin
+and Gidney, Craig
+and Giustina, Marissa
+and Graff, Rob
+and Guerin, Keith
+and Habegger, Steve
+and Harrigan, Matthew P.
+and Hartmann, Michael J.
+and Ho, Alan
+and Hoffmann, Markus
+and Huang, Trent
+and Humble, Travis S.
+and Isakov, Sergei V.
+and Jeffrey, Evan
+and Jiang, Zhang
+and Kafri, Dvir
+and Kechedzhi, Kostyantyn
+and Kelly, Julian
+and Klimov, Paul V.
+and Knysh, Sergey
+and Korotkov, Alexander
+and Kostritsa, Fedor
+and Landhuis, David
+and Lindmark, Mike
+and Lucero, Erik
+and Lyakh, Dmitry
+and Mandr{\`a}, Salvatore
+and McClean, Jarrod R.
+and McEwen, Matthew
+and Megrant, Anthony
+and Mi, Xiao
+and Michielsen, Kristel
+and Mohseni, Masoud
+and Mutus, Josh
+and Naaman, Ofer
+and Neeley, Matthew
+and Neill, Charles
+and Niu, Murphy Yuezhen
+and Ostby, Eric
+and Petukhov, Andre
+and Platt, John C.
+and Quintana, Chris
+and Rieffel, Eleanor G.
+and Roushan, Pedram
+and Rubin, Nicholas C.
+and Sank, Daniel
+and Satzinger, Kevin J.
+and Smelyanskiy, Vadim
+and Sung, Kevin J.
+and Trevithick, Matthew D.
+and Vainsencher, Amit
+and Villalonga, Benjamin
+and White, Theodore
+and Yao, Z. Jamie
+and Yeh, Ping
+and Zalcman, Adam
+and Neven, Hartmut
+and Martinis, John M.},
+title={Quantum supremacy using a programmable superconducting processor},
+journal={Nature},
+year={2019},
+month={Oct},
+day={01},
+volume={574},
+number={7779},
+pages={505-510},
+abstract={The promise of quantum computers is that certain computational tasks might be executed exponentially faster on a quantum processor than on a classical processor1. A fundamental challenge is to build a high-fidelity processor capable of running quantum algorithms in an exponentially large computational space. Here we report the use of a processor with programmable superconducting qubits2--7 to create quantum states on 53 qubits, corresponding to a computational state-space of dimension 253 (about 1016). Measurements from repeated experiments sample the resulting probability distribution, which we verify using classical simulations. Our Sycamore processor takes about 200 seconds to sample one instance of a quantum circuit a million times---our benchmarks currently indicate that the equivalent task for a state-of-the-art classical supercomputer would take approximately 10,000 years. This dramatic increase in speed compared to all known classical algorithms is an experimental realization of quantum supremacy8--14 for this specific computational task, heralding a much-anticipated computing paradigm.},
+issn={1476-4687},
+doi={10.1038/s41586-019-1666-5},
+url={https://doi.org/10.1038/s41586-019-1666-5}
+}
+@misc{chemistrynono,
+Author = {Seunghoon Lee and Joonho Lee and Huanchen Zhai and Yu Tong and Alexander M. Dalzell and Ashutosh Kumar and Phillip Helms and Johnnie Gray and Zhi-Hao Cui and Wenyuan Liu and Michael Kastoryano and Ryan Babbush and John Preskill and David R. Reichman and Earl T. Campbell and Edward F. Valeev and Lin Lin and Garnet Kin-Lic Chan},
+Title = {Is there evidence for exponential quantum advantage in quantum chemistry?},
+Year = {2022},
+Eprint = {arXiv:2208.02199},
+}
+
+
+@article{Fowler2012surface,
+  title = {Surface codes: Towards practical large-scale quantum computation},
+  author = {Fowler, Austin G. and Mariantoni, Matteo and Martinis, John M. and Cleland, Andrew N.},
+  journal = {Phys. Rev. A},
+  volume = {86},
+  issue = {3},
+  pages = {032324},
+  numpages = {48},
+  year = {2012},
+  month = {Sep},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevA.86.032324},
+  url = {https://link.aps.org/doi/10.1103/PhysRevA.86.032324}
+}
+
+
+@article{nosupremacy,
+  title = {Solving the Sampling Problem of the Sycamore Quantum Circuits},
+  author = {Pan, Feng and Chen, Keyang and Zhang, Pan},
+  journal = {Phys. Rev. Lett.},
+  volume = {129},
+  issue = {9},
+  pages = {090502},
+  numpages = {6},
+  year = {2022},
+  month = {Aug},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.129.090502},
+  url = {https://link.aps.org/doi/10.1103/PhysRevLett.129.090502}
+}
+
+
+@Article{VQA_revmarco,
+author={Cerezo, M.
+and Arrasmith, Andrew
+and Babbush, Ryan
+and Benjamin, Simon C.
+and Endo, Suguru
+and Fujii, Keisuke
+and McClean, Jarrod R.
+and Mitarai, Kosuke
+and Yuan, Xiao
+and Cincio, Lukasz
+and Coles, Patrick J.},
+title={Variational quantum algorithms},
+journal={Nature Reviews Physics},
+year={2021},
+month={Sep},
+day={01},
+volume={3},
+number={9},
+pages={625-644},
+abstract={Applications such as simulating complicated quantum systems or solving large-scale linear algebra problems are very challenging for classical computers, owing to the extremely high computational cost. Quantum computers promise a solution, although fault-tolerant quantum computers will probably not be available in the near future. Current quantum devices have serious constraints, including limited numbers of qubits and noise processes that limit circuit depth. Variational quantum algorithms (VQAs), which use a classical optimizer to train a parameterized quantum circuit, have emerged as a leading strategy to address these constraints. VQAs have now been proposed for essentially all applications that researchers have envisaged for quantum computers, and they appear to be the best hope for obtaining quantum advantage. Nevertheless, challenges remain, including the trainability, accuracy and efficiency of VQAs. Here we overview the field of VQAs, discuss strategies to overcome their challenges and highlight the exciting prospects for using them to obtain quantum advantage.},
+issn={2522-5820},
+doi={10.1038/s42254-021-00348-9},
+url={https://doi.org/10.1038/s42254-021-00348-9}
+}
+
+
+
+@article{VQA_revalba,
+  title = {Noisy intermediate-scale quantum algorithms},
+  author = {Bharti, Kishor and Cervera-Lierta, Alba and Kyaw, Thi Ha and Haug, Tobias and Alperin-Lea, Sumner and Anand, Abhinav and Degroote, Matthias and Heimonen, Hermanni and Kottmann, Jakob S. and Menke, Tim and Mok, Wai-Keong and Sim, Sukin and Kwek, Leong-Chuan and Aspuru-Guzik, Al\'an},
+  journal = {Rev. Mod. Phys.},
+  volume = {94},
+  issue = {1},
+  pages = {015004},
+  numpages = {69},
+  year = {2022},
+  month = {Feb},
+  publisher = {American Physical Society},
+  doi = {10.1103/RevModPhys.94.015004},
+  url = {https://link.aps.org/doi/10.1103/RevModPhys.94.015004}
+}
+
+
+
+@misc{wikiansa,
+   author = {Wikipedia},
+	 title={Ansatz},
+   year = {2022},
+ }

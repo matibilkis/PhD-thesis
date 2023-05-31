@@ -1,0 +1,150 @@
+\documentclass[12pt,twoside]{book}
+\usepackage[utf8]{inputenc}
+
+% Style, symbols and language
+\usepackage{libertine}
+\usepackage[normalem]{ulem}
+\usepackage{dsfont}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage[catalan,spanish,english]{babel}
+
+% Graphics, figures and colors
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{floatrow}
+\usepackage{csquotes}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{myColor}{HTML}{9B3035}
+\definecolor{GIQOrange}{HTML}{C74B2A}
+
+\usepackage{apptools}
+\usepackage{titlesec}
+\titleformat
+{\chapter} % command
+[display] % shape
+{\bfseries\Huge} % format
+{\filleft\,\scalebox{4}{\color{lightgray}\thechapter}} % label
+{0.5ex} % sep
+{   \rule{\textwidth}{1pt}
+    \vspace{0.5 ex}
+} % before-code
+[
+\vspace{-0.5 ex}%
+\rule{\textwidth}{1pt}
+] % after-code
+
+% Bibliography, Hyperlinks and References
+\usepackage[bibstyle=phys,citestyle=alphabetic,minalphanames=3,sorting=ynt,backend=biber]{biblatex}
+\usepackage{cite}
+
+\include{bibliography_script}
+
+\addbibresource{biblatex-examples.bib}
+\addbibresource[label=ownpubs]{biblatex-examples.bib}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+     colorlinks = true,
+     citecolor = magenta,
+     linkcolor = magenta,
+     urlcolor = magenta}
+
+% Layout
+\usepackage[a4paper,width=140mm,top=50mm,bottom=50mm,bindingoffset=6mm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy} % \pagestyle{plain} changes to standard
+\fancyhead{}
+\fancyhead[LO]{\leftmark}
+\fancyhead[RE]{\rightmark}
+\fancyfoot{}
+\fancyfoot[RO,LE]{\thepage}
+
+
+% Miscellaneous
+\usepackage{enumerate}
+\usepackage[final]{microtype}
+\usepackage{epigraph}
+\usepackage{lipsum}
+\renewcommand{\epigraphrule}{0pt}
+\renewcommand{\epigraphflush}{flushleft}
+\renewcommand{\textflush}{flushepinormal}
+\renewenvironment{flushepinormal}{}{\vspace*{-1\baselineskip}}
+\setlength{\epigraphwidth}{0.55\textwidth}
+\usepackage[
+    type={CC},
+    modifier={by-nc-sa},
+    version={3.0},
+    imagemodifier={-eu-88x31}
+]{doclicense}
+
+\newcommand{\myTitle}{Decision-making in quantum environments:}
+\newcommand{\mySubtitle}{from model-free to
+model aware learning of quantum controls}
+\newcommand{\myName}{Matias Bilkis}
+\newcommand{\myProfessor}{John Calsamiglia Costa}
+\newcommand{\mySupervisor}{}
+\newcommand{\myUniversity}{Universitat Autònoma de Barcelona}
+\newcommand{\myFaculty}{Facultat de Ciències}
+\newcommand{\myGroup}{Física Teòrica: Informació i Fenòmens Quàntics}
+\newcommand{\myDepartment}{Departament de Física}
+\newcommand{\myLocation}{Bellaterra}
+\newcommand{\myTime}{Defense date}
+
+\newcommand{\dbar}{d\hspace*{-0.08em}\bar{}\hspace*{0.1em}}
+
+% Change line width of the fancy package
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+\frontmatter
+
+\include{FrontBackMatter/title_small}
+\include{FrontBackMatter/left_blank}
+\include{FrontBackMatter/title_page}
+\include{FrontBackMatter/copyright}
+\include{FrontBackMatter/dedication}
+\include{FrontBackMatter/left_blank}
+\include{FrontBackMatter/abstract_catalan}
+\include{FrontBackMatter/abstract_spanish}
+\include{FrontBackMatter/abstract_english}
+\include{FrontBackMatter/left_blank}
+\include{FrontBackMatter/declaration}
+\include{FrontBackMatter/publications}
+\include{FrontBackMatter/left_blank}
+\include{FrontBackMatter/acknowledgments}
+\include{FrontBackMatter/left_blank}
+\include{FrontBackMatter/contents}
+\include{FrontBackMatter/notation}
+
+\mainmatter
+\chapter{Introduction}
+\epigraphhead[50]{\epigraph{\textit{At the beginning there was only Chaos.}}{--- Aristophanes}}
+
+\pagestyle{fancy}
+\input{Chapters/Introduction}
+
+\chapter{Preliminaries}
+\epigraphhead[50]{\epigraph{\textit{There is nothing more practical than a good theory}}{--- Kurt Lewin}}
+\input{Chapters/Chapter02}
+
+\chapter{Results}
+\input{Chapters/Chapter03}
+
+\chapter{Conclusions}
+\input{Chapters/Conclusions}
+
+\appendix
+
+\chapter{Technicalities}
+
+
+\printbibliography
+
+\end{document}

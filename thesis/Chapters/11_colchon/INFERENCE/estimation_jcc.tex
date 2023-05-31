@@ -1,0 +1,44 @@
+In this Section we discuss parameter estimation, and in particular the limits that (classical) information theory imposes to the accuracy that can be attained when estimating a parameter encoded in a probability distribution function out of a finite number of samples.
+
+Let $f(x, \theta)$ be a probability distribution function, parametrized by $\theta$ (as an example, a normal distribution $\mathcal{N}(\mu,\sigma)$ has parameters $\mu$ and $\sigma$). We interpret such object as being the probability of a sample to take the value $x$, given a known value of $\theta$. \jcc{For instance, if $f$ has a strong dependence \textit{w.r.t.} $\theta$, we expect it to be easier to infer information about $\theta$, and fewer samples will be sufficient to estimate the value of the parameter with a given precision}. On the contrary \jccc{contrast}{}, if the landscape of $f$ looks flatter when varying the value of $\theta$, then we will require more samples to be sure that value of $\theta$ is the right one. This notion is captured by the \textit{score} of $f$:
+\equ{s(x,\theta):=\partial_\theta \log{f(x,\theta)},}
+whose mean value vanishes:
+\begin{align*}
+\mathbb{E}[s(x,\theta)] = \int_\mathbb{R} dx \partial_\theta \log f(x,\theta) f(x,\theta) = \partial_\theta \int_R dx f(x,\theta) = 0.
+\end{align*}
+\jcc{where the last equality follows from the normalization $\int_R dx f(x,\theta)=1$}.
+However, its variance contains information about the parameter-landscape, and reads
+\begin{align*}
+I(\theta):= \text{Var}[s] = \mathbb{E}_x[\big(\partial_\theta \log f(x,\theta)\big)^2] &= \int_\mathbb{R} dx f(x,\theta) \big(\partial_\theta \log f(x,\theta)\big)^2 \\&= \int_\mathbb{R} dx f(x,\theta) \Big(\frac{\partial_\theta f}{f}\Big)^2.
+\end{align*}
+The variance of the score is known as the \textit{Fisher information}, and we can explicitly see that is linked to the curvature of $f$ as per
+\begin{align*}
+\langle\partial^2_\theta \log f \rangle = \langle - \frac{(\partial_\theta f)^2}{f^2}\rangle + \cancelto{0}{\langle \frac{\partial^2_\theta f}{f} \rangle}.
+\end{align*}
+Overall, the Fisher information describes how the landscape of $f$ looks when varying the parameters $\theta$, and the following relation holds
+\begin{align}I(\theta) = \mathbb{E}[(\partial_\theta \log f)^2] = - \mathbb{E}[\partial^2_\theta \log f].\end{align}
+However, we are interested in providing an estimation of the parameter, given that we acquired a random (\textit{i.i.d}) sequence \jccc{$\bm{x}\sim f$}{$\bm{x}$ sampled from $f$}. To this end we define an \textit{estimator} $\hat{\theta}(\bm{x})$ to be a statistic that provides such value $\hat{\theta}$. For instance, the sample average $\expect{\bm{x}} = \frac{1}{n}\sum_k x_k$ is an (unbiased) estimator for the mean of $f$.
+
+Among all possible estimators, we will find it useful to consider the \textit{maximum-likelihood} one, defined as
+\equ{\hat{\theta} = \underset{\theta}{\text{ArgMax\;}} \log{f(\bm{x}, \theta)},}
+where we note that since $\bm{x}$ consists on \textit{i.i.d.} samples, we can factorize the logarithm of the likelihood function as a sum of contributions, similarly to Eq.~\ref{eq:logsumrandom}. While the maximum-likelihood estimator is \textit{consistent}, in the sense that for a very large number of samples such estimator converges to the correct value almost surely, it might be \textit{biased} (in the sense that its expected value might differ from underlying true parameter we want to estimate)\footnote{Note however that any consistent estimator is assymptotically unbiased.}. This is in line with the fact that such estimator retrieves the parameter value which is most consistent with the observed data, but not with the average.
+
+To end this discussion on parameter estimation, let us comment on a fundamental result that relates the ultimate performance of an estimator with the Fisher information. In turn, the \textit{Cramer-Rao bound} provides a lower bound to the variance of any (unbiased) estimator. This means that our confidence in the estimation cannot be higher than the information carried out by the underlying probability distribution function $f$, as given by the Fisher Information $I(\theta)$ introduced above. To see this, we consider an (unbiased) estimator of $\theta$, \textit{i.e} $\hat{\theta}$. If it is unbiased, then the following chain of equalities holds:
+\begin{align*}
+0 = \int dx f(x) \big(\hat{\theta}-\theta ) = \partial_\theta \Big[ \int dx f(x) \big(\hat{\theta}-\theta ) \Big] = -1 + \int dx \big(\partial_\theta f(x)\big)\; \big(\hat{\theta}-\theta ),
+\end{align*}
+and thus we conclude that $\int dx f(x) \big(\partial_\theta \log{f}\big) \big(\hat{\theta}-\theta) = 1$
+If we now we use the Cauchy-Schwartz inequality, \textit{i.e.} $(u,v)^2 \leq (u,u) (v,v)$, we get
+\begin{align*}
+1^2 &= \Big[\int dx \Big((\hat{\theta}-\theta) \sqrt{f} \Big) \Big( \sqrt{f} \partial_\theta \log f(x) \Big) \Big]^2\\
+&\leq \int dx \Big((\hat{\theta}-\theta) \sqrt{f} \Big)^2 \Big] \Big[ \int dx \Big( \sqrt{f} \partial_\theta \log f(x) \Big)^2 \\
+&=  \text{Var}[\hat{\theta}] I(\theta).
+\end{align*}
+From where we get the Cramer-Rao bound:
+\eq{CRbound}{\text{Var}[\hat{\theta}]:=\expect{(\hat\theta-\theta)^{2}}_{x}\geq \frac{1}{I(\theta)}}
+
+\jcc{Thus, the Fisher information provides an ultimate (classical) bound for the variance of \textit{any} estimator. Note that in the case of $n$ trials the Fisher information, for \textit{i.i.d.} cases is additive, $I_n(\theta) = n I(\theta)$, which can be seen from  $\mathbb{E} \partial_\theta^2 \log p(x)^n$.
+It can also be shown that in this limit the bound is saturated, hence $\text{Var}[\hat{\theta}]\sim \tfrac{1}{n I(\theta)}$, known a shot-noise limit. }
+\jccc{In continuous time there should be a notion of scaling with time, and thus we will replace $n \rightarrow t$.}{}
+
+To conclude, we note that similar to hypothesis testing, the problem of parameter estimation gets a twist in the quantum realm, where again a non-trivial optimization over measurements (and probes) is involved. Moreover, a new object known as the \textit{quantum Fisher information} appears in the stage, accompanied by a \textit{quantum Cramer-Rao bound}. We will not discuss this topic, but refer the interested reader to Refs.~\cite{Meyer2021fisherinformationin,helstromBOOK,giovanetti2006quatnum}.

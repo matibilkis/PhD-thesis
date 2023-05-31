@@ -1,0 +1,251 @@
+The canonical example to discuss hypothesis testing problems deals with medical trials, where the effectiveness of a new development (for instance, a new test that tells whether a person has COVID or not) is to be tested. We will restrict to two hypothesis, or models, consisting on the null hypothesis $H_0$ (the patient is healthy), and the alternate hypothesis $H_1$ (the patient has COVID). In this context, we are interested in minimizing the chances that a sick patient is said to be healthy\footnote{By the 2020s, there was pandemics, and before having vaccines, we were particularly cautious when testing negative for COVID. For instance, we used to do double checks: if someone contracted COVID chances were extremely high to spread it among people in close contact with.}. This notion is captured by the overall probability that the test retrieves a \textit{false negative}, and is known as the $\beta$-error or type-II error. Denoting by $\hat{H}_i$ the result of the test, \textit{i.e.} $\hat{H}_1$ implies that the test result is \textit{positive} (\jccc{diagnosticating}{diagnosing} the patient as sick) and $\hat{H}_0$ \textit{negative} (telling the patient is healthy), have
+\begin{align}
+\beta = p(\hat{H}_0|H_1).
+\end{align}
+\jcc{Obviously, it is easy to come up with a test makes this quantity zero:  always diagnose the patient as sick irrespective of the result obtained in the test.} Such test is obviously useless, as it does not detect any healthy patients, hence we are interested in keeping the \textit{false positive} rate below one . This quantity is given by the $\alpha$-error, or type-II error:
+\begin{align}
+\alpha = p(\hat{H}_1|H_0).
+\end{align}
+We refer to $\alpha$ and $\beta$ as \textit{weak} errors, since they certify the average performance of the test; on the contrary, when discussing sequential strategies we will also deal with the notion of \textit{strong certification}, in the sense that we will be interested in providing guarantees for \textit{each} realisation of the stochastic processes.
+
+In general it is not possible to minimize both errors and a tradeoff appears: reducing one type of error typically increases the other. Conventionally, we are interested in minimizing $\beta$ for a fixed value of $\alpha$, and this is known as \textit{asymetric hypothesis testing}. On the contrary, there are situations where both type of errors need to be minimized, and thus we consider a linear combination of the errors, leading to the \textit{symmetric} error probability. \jcc{In particular, the total or mean error probability is given by}
+\begin{equation}\label{eq:1_statinf_symm}
+P_e =  \pi_0 p(\hat{H}_1|H_0) + \pi_1 p(\hat{H}_0|H_1),
+\end{equation}
+where $p_k$ stands for the prior probability of having the $k^{\text{\underline{th}}}$ model (and $k=0,1$), and $\sum_k p_k=1$. Analogously, the success probability is defined as
+\begin{equation}\label{eq:1_statinf_symm_ps}
+P_s= 1-P_e =  \pi_0 p(\hat{H}_0|H_0) + \pi_1 p(\hat{H}_1|H_1),
+\end{equation}
+Our notation emphasizes that the symmetric error can be interpreted Bayesianly, where prior probabilities are assigned to each hypothesis and the total error is obtained by multiplying each prior with the posterior probability of having such hypothesis given the observed data.
+
+\jcc{
+Let us consider the example of a discrete random variable $X$ (say a dice) which takes values $x\in\{0,1,\ldots n\}$, with probability distribution $p(x)$ under hypothesis $H_{0}$ or $q(x)$ under hypothesis $H_{1}$. Upon receiving a sample, i.e. a value $x$, we have to make a guess $\hat{H}_{g(x)}$ about the true hypothesis according to a \emph{decision or guessing rule} $g(x)\in\{0,1\}$. The total success probability can be written as
+\begin{align}
+P_{s}&= \sum_{x=1}^{n} \left(P(g(x)=0,x|H_{0})\pi_{0}+P(g(x)=1,x|H_{1})\pi_{1} \right)\nonumber\\
+&\leq \sum_{x=1}^{n} \max\{P(g(x)=0,x|H_{0})\pi_{0},P(g(x)=1,x|H_{1})\pi_{1}\}
+\end{align}
+
+This upper bound can be attained by always guessing for the most likely hypothesis: i.e.
+\begin{equation}
+g(x)=\left\{\begin{array}{ll}
+0 & \mbox{ if } P(x|H_{0})\pi_{0}\geq P(x|H_{1})\pi_{1} \\
+1 &\mbox{ if } P(x|H_{0})\pi_{0}\leq P(x|H_{1})\pi_{1})
+\end{array}\right.
+\end{equation}
+}
+That is \textit{maximum-likelihood} criterium is optimal for the minimum-error case (symmetric error probability optimization).
+
+%
+%Let us consider the example of a discrete random variable $X$ (say a dice) which takes values $x\in\{0,1,\ldots n\}$, with probability distribution $p(x)$ under hypothesis $H_{0}$ or $q(x)$ under hypothesis $H_{1}$.
+% where the possible results are heads or tails; the mean-value (probability of heads) is either $q_0$ or $q_1$. \jccc{The two hypothesis are linked to two different values of such mean, that is $H_0$: \textit{mean-value is} $q_0$ and $H_1$ \textit{mean-value is $q_1$.}
+%\begin{equation}\label{eq:1_statinf_symm_ps}
+%P_s= 1-P_e =  p_0 p(\hat{H}_0|H_0) + p_1 p(\hat{H}_1|H_1)=p(X=0) p
+%\end{equation}
+% Given the outcome is $x$ (heads or tails) our best guess reads
+%\begin{equation*}
+%\hat{H}_{i}(x) = \argmax_{i} p(i|x)
+%\end{equation*}
+%that is guess the hypothesis that it most like to have happend given our current knowledge.
+%
+%From Bayes theorem, the success probability is
+%\equ{P_s = p_0 \mmax{}\llaves{p(heads|H_0), p(heads|H_1)} + p_1 \mmax{}\llaves{p(tails|H_0), p(tails|H_1)},}
+%Here, we remark that the likelihood $p(x|H_k)$ serves as a decision function, and the \textit{maximum-likelihood} criterium is optimal for the minimum-error case (symmetric error probability optimization).
+
+Before further discussing hypothesis testing and the asymmetric scenario, we will discuss a situation in which the underlying models are quantum states. That is, given a copy of a quantum state we are asked to correctly label it. However, this situation is subtle: \jcc{the maximum-likelihood criterium can only be applied once a particular measurement (POVM) is implemented, and this is of course also subject to optimization.}
+\subsection{Single-shot quantum state discrimination}\label{sec:1_qdisc}
+\input{Chapters/11_colchon/7qdisc}
+
+\subsection{Back to the classics: \jccc{assymetric}{asymetric} hypothesis testing}\label{ssec:asym}
+Error probabilities non-trivially depends on the amount of data available, \textit{e.g.} the number of samples. Intuitively, the more data we have (\textit{e.g.} the more we have sampled our system), the smaller should the errors be on average. In the independent and identically distributed (\textit{i.i.d}) scenario, much can be discussed about errors' behaviour, specially in the asymptotic limit of large number of copies.
+Quite generically, it can be seen that the error decays exponentially with the number of copies with a rate
+that depends of the two possible states, i.e. $\epsilon\sim e^{-r(\rho,\sigma) N}$, where the function $r(\rho,\sigma)$ as well as the optimal measurement attaining the rate depends on the precise setting (symmetric, asymmetric, etc..). \jcc{In the classical case (commuting states) there is a very powerful lemma known as the \textit{Neyman-Pearson lemma}, that provides the statistic or estimator that is optimal for a wide range of settings.
+
+
+\textit{Neyman-Pearson Lemma}. Given a binary hypothesis testing problem where we need to tell if data $\xf = (x_1,...,x_n)$ has been sampled from either $H=H_0$ or $H=H_1$, for $T>0$ we define the \textit{acceptange region} as
+\equ{A(T)  = \Llaves{\frac{p(\xf|H_1)}{p(\xf|H_0)} \geq T},}
+where $\xf$ are the samples acquired, and $T$ is the \textit{decision-boundary} (note that the point $T=1$ is where the hypothesis are equally likely). The decision region plays a prominent role in the values that the resulting errors take, and in this case read $\alpha^* = p \big(A(T)|H_0\big)$ and $\beta^* = p(\overbar{A(T)}|H_1)$\footnote{$\overbar{A(T)}$ denotes the complement of $A(T)$, \textit{e.g.} $\overbar{A(T)} = \Llaves{\xf: \frac{p(\xf|H_1)}{p(\xf|H_0)} <T}$}. Now, consider any other decision region $B$, whose error probabilities are $\alpha_B$ and $\beta_B$.
+Then, the lemma states that if $\alpha_B \leq \alpha^*$, it follows that
+$\beta_B \geq \beta^*$ (and also if $\beta_B \leq \beta^*$ then $\alpha_B \geq \alpha_*$)\footnote{The proof of the lemma is straightforward, and consists on exploting decision functions associated to $A(T)$ and $B$, and playing a bit with the definition of $A(T)$.}.
+
+
+The quantum version of this theorem has a very similar form:
+
+\textit{Quantum Neyman-Pearson Lemma}] \label{thm:Qlikelihoodrat}
+Given a binary hypothesis testing problem with the two hypotheses:  $\rho$ ($H_{0}$) vs. $\sigma$ ($H_{1}$). For  $T>0$ define a two outcome POVM $M=\{M_{0},M_{1}=\mathbb{I} -M_{0}\}$ with
+\begin{equation}\label{eq:optalphabeta}
+M_{0}(T)=\mathbb{I} _{(\rho-T \sigma)>0}
+\end{equation}
+where $\mathbb{I} _{\Delta>0}$ is the projector on the positive part of $\Delta$,
+and the corresponding error probabilities $\alpha^{*}=P(M_{0}|H_{1})=\tr{M_{0}(T)\rho}$ and $\beta^{*}=P(M_{0}|H_{1})=\tr{M_{0}(T)\sigma}$. Given any measurement $F=\{F_{0},F_{1}\}$ and its associated error probabilities $\alpha_{F}$ and $\beta_{F}$. If $\alpha_{F}\leq\alpha^{*}$ then $\beta_{F}\geq \beta^{*}$(and vice versa).
+
+
+The projective measurement $M_{0}(T)$ is the quantum analog of the likelihood test which defined the acceptance region (for hypothesis $H_{0}$)
+$$A=\left\{ \mathbf{x}: \frac{P_{0}(\mathbf{x})}{P_{1}(\mathbf{x})}> T\right\}=
+\left\{ \mathbf{x}: P_{0}(\mathbf{x})-T P_{1}(\mathbf{x})> 0 \right\}$$
+Note also from \eqref{eq:optalphabeta} that such class of measurements $M_{0}(T)$ is optimal when one wishes to minimize the linear combination of errors  $\alpha^{*}+T  \beta^{*}$, as for instance in { symmetric hypothesis testing} taking the parameter $T$ to be the ratio of priors: $T=\pi_{1}/\pi_{0}$. Indeed for this case we recover the famous Helstrom bound from last section.
+}
+
+\subsubsection{Large deviations and asymptotic error rates}
+As we said above, the dependence of the error probabilities is non-trivial with repect to the number of samples available, and we intuitively expect that the error probabilities become smaller and smaller when more data is acquired. This is can be formally studied, and we here provided a short outline of the topic.
+
+We will begin by discussing the notion of \textit{random variable concentration}. We consider the random sequence $\xf$ with $x_k \in \mathcal{A} = \llaves{a_1,...,a_M}$, and consisting on $n$ \textit{i.i.d} samples, whose underlying probability will be denoted by $Q$, \textit{i.e.} \jccc{$Q(\mathbf{x}) = \prod_{k=1}^n x_k$}{$Q^{n}(\mathbf{x}) = \prod_{k=1}^n Q(x_k)$}.
+
+We define a \textit{type} $P_\mathbf{x}(\mathcal{A})$ ---for simplicity we will denote it as $P_\mathbf{x}$--- as the empirical probability distribution of each letter in alphabet $\mathcal{A}$, associated to the
+\jccc{random}{} sequence $\mathbf{x}$, \textit{i.e.} $P_\mathbf{x}(a) = \frac{N_\mathbf{x}(a)}{n},\; \forall a \in \mathcal{A}$, where $N_\mathbf{x}(a)$ is the number of times that letter $a$ appears in $\xf$.
+Next, we define as $\mathcal{P}_n$ as the set comprising all possible types $P$ generated by a denominator $n$. %\footnote{Note that the number of all such types is at most polynomial in $n$, \textit{i.e} $|\mathcal{P}_n|\leq (n+1)^{|\mathcal{A}|}$.}.
+For example taking a binary alphabet $\mathcal{A} = \llaves{0,1}$, we get
+\begin{equation*}
+\mathcal{P}_n = \llaves{\big(P(0), P(1)\big): \Big(\frac{0}{n},\frac{n}{n} \Big), \Big(\frac{1}{n},\frac{n-1}{n} \Big) \jcc{\ldots,  \Big(\frac{n}{n},\frac{0}{n} \Big)}}.
+\end{equation*}
+Since many sequences can lead to the same type, we define the type class $T(P)$ as
+\equ{T(P) = \llaves{\mathbf{x}: P_\mathbf{x} = P}.}
+Now, the probability of a given sequence $\mathbf{x}$, which is $i.i.d.$ and sampled from $Q$ can be written in terms of its type $P_\mathbf{x}$ as\footnote{To see this, we expand the total probability of $\mathbf{x}$ and exploit the $i.i.d.$ property:
+\begin{align*}
+Q^{n}(\mathbf{x}) = \prod_k Q(x_k) =\prod_{a\in\mathcal{A}}Q(a)^{N_\mathbf{x}(a)} &= \prod_{a\in \mathcal{A}}Q(a)^{n P_\mathbf{x}(a)} \\
+&= e^{-n \Big(\sum_{a\in\mathcal{A}} P_\mathbf{x}(a) \log{\frac{P_\mathbf{x}(a)}{Q(a)} - P_\mathbf{x}(a) \log{P_\mathbf{x}(a)}}\Big)},
+\end{align*}
+where the last terms in the exponent can is the relative entropy and Shannon entropy respectively.}
+\eq{probSEQ}{Q^{n}(\mathbf{x}) = e^{-n\Big(D(P_\mathbf{x} || Q) + H(P_\mathbf{x})\Big)},}
+where the relative entropy between two (discrete) random-variable distributions is defined as $D(p||q)=\sum_k p_k \log{\frac{p_k}{q_k}}$ and $H$ is the Shannon entropy.% $H(p) = -\sum_k p_k \log{p_k}$.
+
+\jcc{
+From Eq.~\ref{eq:probSEQ} we can readily see that for typical sequences, i.e. sequences
+$\mathbf{x}$ with  $P_\mathbf{x}=Q$, $Q(\mathbf{x}) = e^{-n H(Q)}$, i.e. its occurrence is given by the entropy of $Q$.
+
+It can be shown that the size of a given type class (that is the number of sequences with a given empirical distribution) is asymptotically given by $|T(P)|\sim e^{n H(P)}$. This allows us to write the probability of a given type class as
+\equ{Q\Big(T(P)\Big)=|T(P)|e^{-n\Big(D(P_\mathbf{x}=P || Q) + H(P)\Big)} \sim e^{-n D(P||Q).}}
+
+This shows that type class corresponding to the typical distribution is exponentially most probable that any other type. This puts on solid grounds that if one samples a distribution many times the frequency of symbols  will be essentially equal to the probabilities. $\frac{N(a)}{n}=Q(a)$ with high probability.
+
+For example, considering again the tossing-coin example, with a heads probability of $q$. For $n$ samples the types $\mathcal{P}_n$ can be fully characterized by the number of heads, \textit{i.e.} $\mathcal{P}_n = \llaves{\Big(\frac{k}{n}, \frac{n-k}{n}\Big)}_{k=1}^n$, and the random variables concentrate around the type $k$ given by $\frac{k}{n} = q$ \jcc{ as $n\to\infty$}.
+
+\vspace{1cm}
+Let us return to the likelihood ratio, which given a random sequence $\mathbf{x}$ is obtained as $\Lambda(\mathbf{x})=\frac{p_1(\mathbf{x})}{p_0(\mathbf{x})}$. In the \textit{i.i.d.} setting we can link the logarithm of the likelihood ratio, which we call the \textit{log-likelihood ratio} and denote by $\ell$, to the relative entropies as
+\begin{align}\label{eq:loglikiid}
+\ell(\xf) = \log{\frac{p_1(\xf)}{p_0(\xf)}} &= \sum_{i=1}^n \log{\frac{p_1(x_i)}{p_0(x_i)}} \\ &= \sum_{a\in\cA} n P_\xf(a) \log{\frac{p_1(a)}{p_0(a)}} \\ \nonumber
+&= \sum_{a\in\cA} n P_\xf(a) \log{\frac{p_\xf(a)}{p_0(x_i)} - \sum_{a\in\cA} n P_\xf(a) \log{\frac{p_\xf(a)}{p_1(x_i)}}} \\ \nonumber
+&= n \Big[ D(P_\xf||p_0) - D(P_\xf||p_1) \Big] \nonumber.
+\end{align}
+}
+
+\jccc{ Moreover, the log-likelihood ratio concentrates, in the \textit{i.i.d.} case and assuming that $H_1$ is the underlying model, to the relative entropy\footnote{This follows from the weak law of large numbers.}:
+\eq{concenELL}{\frac{\ell(\xf)}{n} \underset{n\rightarrow\infty}{\longrightarrow} D(P_1||P_0).}}{
+From here it is immediate to see that the expectation value of log-likelihood under hypothesis
+$H_1$ is given by the relative entropy, $\expect{\ell}_{1}/n=D(P_1||P_0)$, and under $H_{0}$
+ by $\expect{\ell}_{0}/n=- D(P_0||P_1)$. Actually from our previous discussion on theory of types it also follows that $\ell/n$ concentrates around this values: e.g.
+ \eq{concenELL}{\frac{\ell(\xf)}{n} \underset{n\rightarrow\infty}{\longrightarrow} D(P_1||P_0).}
+under $H_{1}$.}
+
+\jcc{Neyman-Pearson's Lemma in conjunction with the theory of types also allows us to easily asses the asymptotic error rates for  \textit{i.i.d.} sampling. It is clear that the decision region depends only on the type class of the observed sequence (i.e., in the case of the coin, the total number of head and tails).
+
+Then, for symmetric hypothesis testing, the optimal decision region corresponds to guessing for the most probable hypothesis (given the observed empirical distribution) or equivalently guessing hypothesis
+$H_{1}$ ($H_{0}$) if $\ell>0$ ($\ell\leq 0$). It is easy to check that the error rate for $P_{err}^{(n)} = \pi_0 \alpha_n + \pi_1 \beta_n$ is dominated by the events were $\ell=0$, i.e. $D(P_\xf||p_0) - D(P_\xf||p_1) =0$.
+That is, we obtain the famous \textit{Chernoff coefficient}:
+\eq{chernoff}{C^*=\underset{n\rightarrow\infty}{\text{lim}} - \frac{1}{n}\log{\underset{A_n}{\text{ min }} P^{(n)}_{err}},}
+where $C^* = D(P_{\lambda^*}||P_1) = D(P_{\lambda^*}||P_0})$, meaning that $\lambda^*$ is determined by the probability distribution $P_\lambda$ for which the relative entropy to $P_0$ equals the relative entropy to $P_1$\footnote{Such probability distrbution has the structure $P_\lambda(x) = \frac{P_0^{\lambda}(x) P_1^{1-\lambda}(x)}{\sum_{a\in\cA} P_0^\lambda(a)P_1^{1-\lambda}(a)}$, which leads \jcc{to an alternative (more common) }expression for $C^* = -\underset{0\leq\lambda\leq 1}{\text{ min }} \log{\sum_{a\in\cA} P_0(a)^\lambda P_1^{1-\lambda}(a)}$}
+}
+
+\jcc{Similarly, in the asymmetric setting one can get the largest error exponent (fastest decay of the error), while keeping a finite probability for the other type error (recall that we wish to diagnose correctly at least a fraction of the healthy patients). This is is formalized in the following lemma.
+
+
+\textit{Stein-lemma}. Let $\xf$ be a sequence of \textit{i.i.d.} samples obtained from $Q$. We consider an hypothesis testing scenario where the models are given by $Q=P_1$ and $Q=P_0$. Let $A_n$ be an acceptance region for hypothesis $H_1$, and the error probabilities be $\alpha_n = P(\bar{A}_n|H_0)$ and $\beta_n = P(A_n|H_1)$. Let $0<\epsilon<\frac{1}{2}$, and define $\beta_n^\epsilon = \underset{A_n}{\text{min}}\;\beta_n$ such that $\alpha_n<\epsilon$.
+Then the optimal error exponent is
+\eq{stein}{ -\underset{n\rightarrow\infty}{\text{lim}} \frac{\log{\beta_n^\epsilon}}{n} = D(P_0||P_1).}
+
+Note that this rate is independent of the particular value of $\epsilon$. Similarly, the $\alpha$ error is minimized instead (while keeping $\beta<1/2$, then the optimal rate is given by $D(P_1||P_0)$.
+The relative entropies appearing in the Stein lemma, are strictly larger than the Chernoff coefficient, as it should since in the symmetric scenario both (optimal) errors must decay exponentially, whereas in the asymmetric case only one them remains constant.
+
+Finally, note that the error rates provide an operational interpretation to the relative entropy and the Chernoff coefficient as  measures of distinguishability between the two probability distributions}
+
+
+
+\subsubsection{Quantum hypothesis testing: a brief comment}
+While we provided an introduction to the classical hypothesis testing problem, and this suffices for the scope of this thesis, we will here outline how this situation generalizes to the quantum realm. Contrary to the single-shot quantum-state discrimination scenario, we are here given $N$ copies of the same quantum state, and it is desired to identify its nature among two (or more) alternatives. In this case, since more information is available, our performance is expected to be better on average, similarly to the results discussed in Sec.~\ref{ssec:asym}. The scope of possible strategies is, however, non-trivially larger. In turn, we can choose to perform either a separable quantum measurement (individually measure each copy), an \jccc{sequential}{adaptive} quantum measurement (where the result of the previous copy conditions the next quantum measurement to be performed), or a joint measurement acting on all the $N$ copies at once, or even any combination of the above strategies. Generally, the optimal error probability exponentially decreases with the number of copies, and deriving rates at which it does so is the matter of \textit{quantum hypothesis testing}. For example, in the \textit{i.i.d.} scenario, generalizations of the classical testing framework are known: while the symmetric error decreases with a rate known as the \textit{quantum Chernoff coeficient}\cite{Audenaert2007Discrimination}, the \jccc{assymmetric}{asymmetric} errors have quantum relative entropies as rates~\cite{Hiai1991,Stein2}. In these lines, the optimal measurement attaining such rates might be a global one (\textit{i.e.} acting jointly on all the available copies). We remark, however, that for the case of binary pure state discrimination, it has been shown that one can be asymptotically optimal when measuring locally and updating the priors in a Bayesian manner~\cite{Acin2005Multi}.
+
+\subsection{Sequetial hypothesis testing}\label{ssec:sprt}
+So far we have discussed the hypothesis testing setting in which $n$ samples of data where presented to us, and a decision needs to be made for the underlying hypothesis. We introduced different figures of merits, taking into account the importance given to each error type. Following, we introduced the log-likelihood ratio, which via the Neyman-Pearson lemma turns out to be the optimal statistic. Then, we have discussed the asymptotic behaviour of the errors, which in the \textit{i.i.d.} are exponentially decaying, with a rate given by either the relative entropy (asymmetric scenario) or the Chernoff coefficient (symmetric scenario).
+
+Strikingly, by slightly relaxing the setting, more efficient strategies can be brought to the stage. This consists in relaxing the condition that the underlying hypothesis needs to be determined after observing the random sequence $\xf$ (of length $n$). Instead, we could think of allowing for an extra label that deems $\xf$ as inconclusive. In this case, further samples will be required, and the test proceeds in a \textit{sequential} fashion until a given criterium is met.
+
+Thus, a sequential strategy is characterized by \textit{(i)} \textit{a stopping rule}, that tells whether to stop the sampling process or to demand an additional sample, and \textit{(ii)} \textit{a decision rule} which selects one hypothesis or the other in case of stopping the test. Moreover, we will consider a scenario in which one can guarantee that \textit{for each realization of the test}, the conditional probability of correctly identifying each of the hypothesis is above some pre-defined threshold. This is known as a \textit{strong errors guarantee}, \textit{i.e.} given $\epsilon_k$ ($k=0,1$), the test assures that
+\eq{strongSPRT}{p(H_k|\xf_n)\geq1-\epsilon_k.}
+These conditions cannot always be achieved by a test with a fixed-horizon --- since there is a chance that the random sequence is not informative enough to assert the correctness of Eq.~\ref{eq:strongSPRT} for \textit{both} hypothesis ---. On the contrary, if new samples are demanded until conditions in Eq.~\ref{eq:strongSPRT} are fulfilled, then we can readily devise a test --- known as the Sequential Probability Ratio Test (SPRT)~\cite{Wald1948Optimum} --- that consists on the following. \jcc{More succinctly,} starting at $n=1$, at each step $n$ check if
+\begin{enumerate}
+\item $p(H_1|\xf_n) \geq 1-\epsilon_1$. If this happens, \textit{stop} and accept $H_1$, with a success probability guaranteed to be $P_{s_1} \geq 1-\epsilon_1$.
+\item $p(H_0|\xf_n) \geq 1-\epsilon_0$. If this happens, \textit{stop} and accept $H_0$, with a success probability guaranteed to be $P_{s_1} \geq 1-\epsilon_0$.
+\item If neither of 1. nor 2. is accomplished, then continue sampling and move to the next step.
+\end{enumerate}
+This procedure can be casted in terms of the log-likelihood ratio $\ell_n = \ell(\xf_n)$ at step $n$. By using Bayes theorem, we can readily construct an ``\textit{undecision}'' region $\Omega = [a_0, a_1]$ such that
+\begin{align}\label{eq:decisionsASPRT}
+a_1 &= \log{ \Big(\frac{1-\epsilon_1}{\epsilon_1} \frac{\pi_0}{\pi_1} \Big)}\\
+a_0 &= \log{\Big(\frac{\epsilon_0}{1-\epsilon_0}\frac{\pi_0}{\pi_1} \Big)}\nonumber
+\end{align}
+and then the test proceeds at step $n$ as follows:
+\begin{itemize}
+\item Compute the log-likelihood ratio $\ell_n$
+\item If $\ell_n \geq a_1$ \textit{stop} the test, and accept $H_1$, with a success probability guaranteed to be $P_{s_1} \geq 1-\epsilon_1$
+\item Alternatively, if $\ell_n \leq a_0$, \textit{stop} the test, and accept $H_0$, with a success probability guaranteed to be $P_{s_0}\geq 1-\epsilon_0$
+\item On the contrary, if $\ell_n \in \Omega$, demand an extra sample and repeat the test for step $n+1$.
+\end{itemize}
+
+As explicited by Eq.~\ref{eq:loglikiid}, in the \textit{i.i.d.} scenario the log-likelihood ratio can be casted as a sum of contributions $\ell_k = \ell(x_k)$ that are sequentially-acquired:
+\eq{logsumrandom}{\ell(\xf_n) = \log{\frac{p(\xf|H_1)}{p(\xf|H_0)}}) = \sum_{k=1}^n \ell_k, \spacee \ell_k = \log{\frac{p(x_k|H_1)}{p(x_k|H_0)}}.}
+The beauty of this relies on \textit{the random walk interpretation}: with each new sample, a step of length $\ell_k$ is taken with probability $p(\xf_k|Q)$, where $Q$ is the underlying probability distribution, \textit{i.e.} either $P_0$ or $P_1$. From here, we can readily see that the walker will have a positive (negative) drift when $H_1(H_0)$ is the underlying hypothesis:
+\begin{align}
+\expect{\ell(\xf_n)}_{1} &= n D(P_1||P_0) \\ \nonumber
+\expect{\ell\jcc{_{|0}}{}(\xf_n)}_{0} &= -n D(P_0||P_1).
+\end{align}
+These drifts values indicate that the random walk will likely hit the decision boundary that corresponds to the underlying hypothesis, since it moves with an average speed given by the relative entropy. However, it might well be that the stochastic nature of the process leads the walker to hit the complementary decision boundary. Either the case, Wald proved that the walker eventually exits the undecision region $\Omega$, and thus the process stops~\cite{Wald1948Optimum}. The time ---or sample number--- at which the process stops is known as \textit{the stopping time}, and we denote it by $\tau$:
+\eq{stop_time}{\tau := \underset{n}{\text{inf}}\llaves{n:\ell(\xf_n)\notin\Omega}.} Thus, the stopping time refers to the first instance at which the process leaves the $\Omega$ region, and we have that the probability of the walker to be inside the region $\Omega$ goes to zero as the number of samples goes to infinity. In the following, we will interchangeably refer to $\tau$ as the number of samples $n$ at which the process stops, since this Section will serve as a reference for the continuous-time processes analyzed in Chapter~\ref{chapter:CMON}.
+
+The average position of the walker at step $\tau$, \textit{e.g.} the value of $\expect{\ell(\xf_\tau)}$ can be linked to the average value of the stopping-time $\tau$ via the Wald's identity~\cite{probcompbook}:
+\eq{waldIdentity}{\expect{\ell(\xf_\tau)} = \mathbb{E}\Big[\sum_{k=1}^\tau \ell_k \Big] =\expect{\tau} \expect{\ell_k},}
+resulting in
+\jcc{
+\begin{align}\label{eq:waldsolved}
+\expect{\tau\jccc{_{|1}}{}}_{1} &= \frac{\expect{\ell}_{1}}{D(P_1||P_0)}, \\
+\expect{\tau}_{0} &= -\frac{\expect{\ell}_{0}}{D(P_1||P_0)}.
+\end{align}
+}
+Now, it becomes clear that the value of the log-likelihood at the stopping time (the moment when it exits the undecision region) will be essentially given its value at the boundary (essentially $a_{0}$ or $a_{1}$ for hypothesis $H_{1}$ or $H_{0}$, respectively). Hence, as we will show more rigorously below,
+\begin{align}\label{eq:waldsolved}
+\expect{\tau\jcc{_{|1}}{}}_{1} &\sim \frac{a_{1}}{D(P_1||P_0)}, \\
+\expect{\tau}_{0} &\sim -\frac{a_{0}}{D(P_1||P_0)}.
+\end{align}
+
+The last equation clearly shows that the average value of the likelihood ratio is proportional to the average-time required to reach the corresponding decision boundary, and the slope is given by the relative entropy between the probability distributions under consideration. Since the relative entropy is generally not symmetric, \textit{i.e.} $D(P_0||P_1)\neq D(P_1||P_0)$, we expect the average stopping-times to differ when swapping the underlying model. \jccc{Thus, it is interesting to ask how many samples would be required, on average, to stop the process; this will in turn depend on the quality of the sequential test, as given by the strong error conditions of Eq.~\ref{eq:strongSPRT}}}
+
+Let us see now how does SPRT perform regarding the type-I and type-II errors, in particular in the regime where $|a_{i}|$ asymptotically large (small errors), where  $\text{Pr}\big[\ell(\xf_n) \in \Omega\big] \underset{n\rightarrow\infty}{\longrightarrow}0$ holds. For simplicity, we define
+\begin{align*}
+A = e^{a_1} = \frac{1-\epsilon_1}{\epsilon_1} \frac{p_0}{p_1}, \quad B =e^{a_0} =  \frac{\epsilon_0}{1-\epsilon_0} \frac{p_0}{p_1}.
+\end{align*}
+Then, the weak errors can be linked to the decision thresholds as follows
+\begin{align}
+\alpha &= p(\hat{H}_1|H_0) = \sum_{\xf \in \mathbf{\mathcal{X}}_0} p(\xf|H_0) \leq A^{-1}  \sum_{\xf \in \mathbf{\mathcal{X}}_0} p(\xf|H_0) = A^{-1}(1-\beta)\\
+\beta &= p(\hat{H}_0|H_1) = \sum_{\xf \in \mathbf{\mathcal{X}}_1} p(\xf|H_1)\leq B \sum_{\xf \in \mathbf{\mathcal{X}}_1} p(\xf|H_0) = B (1-\alpha),
+\end{align}
+where used that, when stopping the test, the log-likelihood ratio is either higher (smaller) than $a_1(a_0)$, and defined the decision regions $\mathbf{\mathcal{X}}_k$ under which the test decides for the $k^\text{th}$ hytpothesis. \jcc{Moreover, the inequalities above saturate if there is no \emph{overshooting}, that is if the
+process stops exactly at the boundary. This happens either approximately when the step-sizes $\ell_{k}$ are small relative to $a_{i}$, as mentioned above, or if the log-likelihood evolves continuously --- \textit{e.g.} if we are sampling from a Wiener-like process, as discussed in Sec.~\ref{ssec:ito}, and analyzed in Chapter~\ref{chapter:CMON}. In that case the above relations can be inverted to get}
+\begin{align}\label{eq:weakErrorsSPRT}
+\alpha &= \frac{1-B}{A-B} = \frac{1-e^{a_0}}{e^{a_1}-e^{a_0}} = \frac{\epsilon_1(p_1 -\epsilon_0)}{p_0(1-\epsilon_0 -\epsilon_1)}\\
+\beta &= \frac{B(A-1)}{A-B} =  e^{a_0}\frac{e^{a_1}-1}{e^{a_1}-e^{a_0}} = \frac{\epsilon_0 (p_0 - \epsilon_1)}{(1-\epsilon_0-\epsilon_1)p_1}.
+\end{align}
+Thus, imposing strong-error conditions fixes the value of the weak errors in the SPRT. Note that in the case that the boundaries are very large in absolute value, \textit{e.g.} $a_0 \rightarrow -\infty$ and $a_1 \rightarrow\infty$, corresponding to very small values of $\epsilon_0$ and $\epsilon_1$ respectively, then
+\begin{equation}\label{eq:largeBoundaries}
+\alpha \sim e^{a_0}, \quad \beta \sim e^{a_1}.
+\end{equation}
+
+\jcc{\textit{$\ell(\xf_\tau)$ as  binary random-variable:}} In the non-overshooting case, the log-likelihood ratio $\ell(\xf_\tau)$ can take two values once the SPRT stops, which are determined by the region $\Omega$, \textit{e.g.} $\ell(\xf_\tau)\in\llaves{a_0,a_1}$. For instance, if the underlying probability distribution is $P_1$, then the walker will arrive to position $a_1$ with probability $p(\hat{H}_1|H_1) = 1-\alpha$, and otherwise arrive to position $a_0$ with probability $p(\hat{H}_0|H_1) = \beta$ (a similar reasoning applies when the underlying model is $P_0$), and thus we have that the mean-value of the $\ell(\xf_\tau)$ reads
+\eq{mean_ell_binarySPRT}{\expect{\ell(\xf_\tau)}_{1} = a_1(1-\beta) + a_0 \beta, \quad \expect{\ell(\xf_\tau)}_{0} = a_0 \alpha + a_1(1-\alpha).}
+
+From here, we can infer the number of samples required to stop the test, given pre-defined strong error thresholds. In turn, from Eq.~\ref{eq:mean_ell_binarySPRT}, the Wald identity in Eq.~\ref{eq:waldIdentity}, and the expressions of the weak errors in terms of the strong ones, one can readily identify the average stopping-time, whose expression is asymptotically given by
+\jcc{
+\begin{equation}\label{eq:sptrWaldsimple}
+\expect{\tau}_{1} \sim -\frac{ \log{\epsilon_1}}{D(P_0||P_1)}, \quad \expect{\tau}_{0} \sim -\frac{\log{\epsilon_0}}{D(P_1||P_0)}
+\end{equation}
+}
+Remarkably, the SPRT is \textit{optimal} regarding such resource~\cite{Wald1948Optimum}. This means that, for a pre-defined value of the weak errors $\alpha$ and $\beta$\footnote{To avoid confusion, recall that such errors are, in the SPRT, are fixed by the values of $\epsilon_0$ and $\epsilon_1$.}, the number of samples ---$\expect{\tau_{|1}}$ and $\expect{\tau_{|0}}$--- that a test would require to gather cannot be less than that of the SPRT, when accomplishing to such errors.
+
+In this regard, the SPRT comes with a \textit{bonus}: not we one can attain the desired error rates faster, but also it is possible to certify the error commited for any given trajectory. This is in contrast to the approach presented in Sec.~\ref{ssec:asym}, which contrasts the hypothesis in a \textit{static} way. \jccc{Counterintuitively}{As expected, allowing the test to stop consuming resources when enough evidence is gathered results in a lower average number of samples times analysis, and when compared with its \textit{deterministic} counterpart, one can better  error rates using the same resources (on average!)}. Similarly, these results hold for the symmetric error probability in Eq.~\ref{eq:1_statinf_symm_ps}, \textit{e.g.} when the value $P_e = \pi_0 \alpha + \pi_1 \beta$ is fixed in advance, and a sequential test is carried out in order to optimize the average stopping time required to reach such error threshold~\cite{Gordon1976Improved}.
+
+Thus, we will deem the test presented in Sec.~\ref{ssec:asym} --- which does not process the data sequentially but rather makes a decision once a fixed and pre-defined time-horizon has been reached--- as the \textit{deterministic} test. In Chapter~\ref{chapter:CMON} we will thoroughly study the performance of sequential tests in continuously-monitored systems and \jcc{compare their performance with respect that of deterministic ones (those that use data streams of gather during a fixed time)}.

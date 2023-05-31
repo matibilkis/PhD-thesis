@@ -1,0 +1,26 @@
+With some light shed into the sequential structure of Dolinar-like receivers, we will now turn to optimize success probabilities using reinforcement learning techniques introduced in Sec.~\ref{sec:1_ML}. For this purpose, we now need to specify the corresponding definitions such as states, actions, rewards and episodes specific for this setting. Here, we place a reinforcement learning agent to interact with an $L$-Dolinar receiver during repeated experiments; by the end of each experiment the agent is given a reward according the correctness of its guess for the underlying quantum state. In the model-free setting there is no other way than learning optimal actions than by trial-and-error through several repetitions of the experiment. On the contrary, in model-aware settings the agent is able to the compute success probability for each configuration $\llaves{a_\ell}$ in Eq.\ref{eq:psdol}), a situation which is certainly less demanding at the time of calibrating a receiver. Thus, we now state the following definitions:
+\begin{itemize}
+\item Each episode $t$ corresponds to an independent discrimination experiment, with a new default state $s_{0}=\alpha^{(k)}$ sampled from $p_{k}$, $k\in\{0,1\}$
+\item Each episode consists of $L+1$ time-step $\ell=0,\cdots,L$, corresponding to the $L$ detection layers followed by the final guessing stage;
+\item The possible states of the environment at time-steps $\ell$ are $s_{\ell}=\alpha^{(k)}_{\ell}$, i.e., the transmitted part of $s_{0}$ at that layer;
+\item The agent is not aware of the state $s_{\ell}$, in particular it does not know which hypothesis is true, but it can observe the measurement outcome $o_{\ell}$, $0 < \ell \leq L$;
+\item The actions $a_\ell$ available at time-step $0 \leq \ell <L$ are the displacements $\beta_{\ell}$ available at that layer, conditioned on the history of observations and actions $h_{\ell}=(a_0, o_1, ...,a_{\ell-1},o_\ell)$, while at the last step they constitute the guess, $a(h_{L})=\hat{k}\in\{0,1\}$. For a given state $s_\ell$, the set of available actions is denoted as $\mathcal{A}(s_{\ell})$.
+\item The reward $r\in\{0,1\}$ is non-zero only at the end of the episode and provided that the guess is correct, hence the transition function for the environment is
+\begin{align}
+\label{eq:sTr}&\tau(\alpha^{(k')}_{\ell+1}|\alpha^{(k)}_\ell,a_{\ell})=\delta(k',k)\;\;\forall\ell\leq L,\\
+&\tau(r_{L+1}|\alpha^{(k)}_L,a_L)=\delta(r_{L+1},1)\delta(a_L,k),
+\end{align}
+were we omitted the trivial reward for $\ell\leq L$.
+\item Measurement outcomes obtained from the $\ell$-th photodetector will be denoted as $o_\ell$. The set of possible observations is denoted as $\mathcal{O}$.
+\item A \textit{policy} will correspond to the entire set of conditional actions and guess $\llaves{a_\ell}$, which can be thought as a pre-defined receiver configuration. In particular, we target to find the \textit{optimal} configuration, \textit{i.e.} that leading to the highest expected reward.
+\end{itemize}
+Additionally we set $\gamma=1$ since the process has finite horizon; recall that such parameter acts as a regularizer for the \textit{return} function in infinite-horizon problems.
+
+Since the agent has no direct access to the quantum state ---even in the model-aware case---, we are essentially dealing with a Partially Observable Markov Decision Proccess (POMDP). In turn, such is the case when dealing with quantum information, which is only accessible through measurements. Nevertheless, the agent can construct its representation of the state, which in Sec.~\ref{sec:1_ML} was deemed \textit{agent's state}, in order to structure the learning. In this regard, model-free scenarios lead us to define agent's state as the history $h_\ell$ of observations and actions made up to the $\ell$-th stage (layer). However, in the model-aware setting the agent has access to the measurement outcomes, and thus is able to compute success probabilities. Moreover, in such a case, we can exploit the sequential structure of the receiver, in the bayesian update sense. Hence, in the model-aware case we can define agent's state as the prior probability $\eta_k$ of having $\ket{\alpha_k}$. Such a prior probability is bayesian-updated from layer to layer as new information about the hidden state is unveiled from the partial measurement outcomes.
+
+An important consequence of such definitions is that the expected return, departing from the initial state (that is, the state value function of $s_0$, independent of agent awareness) is the success probability associated to agent's policy.
+
+In the following, we will study how those agents (model-aware and model-free) can deal with the problem of calibrating Dolinar-like receivers.
+ %
+ % we discussed in Sec.~\ref{ssec:3bis_intuition}, in the model-aware setting it is possi and is crucial for the application
+ % In the following we will turn to present our results when applying dynamic programming techniques to this specific problem.
