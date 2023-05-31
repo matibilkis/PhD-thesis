@@ -1,9 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-aaa = np.random.random((11111111,1))
-
-plt.hist(np.squeeze(aaa), bins=1000)
-
 import matplotlib.pyplot as plt
 import os
 from scipy.special import erf
@@ -44,45 +40,24 @@ def helstrom(alpha):
     return (1+np.sqrt(1-overlap2(alpha,-alpha)))/2
 
 
-
-
-### check Kennedy expression is correct ###
-
-# np.array([kennedy(a) for a in alphas]) - (1-0.5*np.exp(-4*alphas**2))
-# plt.plot(alphas,1-0.5*np.exp(-4*alphas**2))
-# plt.plot(alphas, [kennedy(a) for a in alphas])
-# aa = np.linspace(5,6,1000)
-# alphas = aa
-# plt.plot(alphas , homodyne(alphas) - (1-0.5*np.exp(-4*alphas**2)))
-
-
-
-
-
-
-
-ax.plot(xalphas,kenns, color="green",linewidth=lw ,label=r'$P_S^{ken}$', alpha=tra)
-ax.plot(xalphas,homodyne(alphas), color="blue",linewidth=lw,label=r'$P_S^{hom}$', alpha=tra)
-
-
-plt.figure(figsize=(10,10))
+plt.figure(figsize=(15,15))
 LS=20
 lw=5
 tra = 0.8
+SS = 40
 xalphas = alphas**2
 ax=plt.subplot()
-ax.plot(xalphas,kenns, color="green",linewidth=lw ,label=r'$P_S^{ken}$', alpha=tra)
 ax.plot(xalphas,homodyne(alphas), color="blue",linewidth=lw,label=r'$P_S^{hom}$', alpha=tra)
 ax.plot(xalphas, kennedys_opts, color="red",linewidth=lw, label=r'$P_S^{ken-opt}$', alpha=tra)
 ax.plot(xalphas, helstrom(alphas), color="black", linewidth=lw, label=r'$P_S^{hel}$', alpha=tra)
-ax.set_xlabel(r'$|\alpha|^2$',size=int(1.5*LS))
+ax.set_xlabel(r'$|\alpha|^2$',size=SS)
+ax.set_ylabel("Success probability",size=SS)
 ax.tick_params(axis='both', which='major', labelsize=LS)
 ax.tick_params(axis='both', which='minor', labelsize=LS)
 ax.legend(prop={"size":25})
-
-path_dir = "Figures/312/"
+path_dir = "Slides/"
 os.makedirs(path_dir,exist_ok=True)
-# plt.savefig(path_dir+"kennedy_compa.pdf")
+plt.savefig(path_dir+"helstrom.png")
 
 
 
