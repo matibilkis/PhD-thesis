@@ -1,5 +1,80 @@
-icons
-16:9
+SLIDE 1
+
+Welcome to my PhD thesis Defense, and thanks very much to Dr. Sentís, Dr. Holmes and Dr. Zambrini for being here, it is a big pleasure that you accepted to be part of the tribunal.
+
+Before beggining I want to mention two technical details which are important.
+
+The first one is that you have access to the slides by scanning thsi QR code, and also to the digital version of the PhD thesis, links are in the github repository.
+
+The second one is that this thesis touches quite a variety of topics in quantum info and machine learning, and the overall consequence of this is my presentation will extend a bit longer than the usual, for around 1.15 mins.
 
 
-33.7  / 19.095
+SLIDE 2
+
+So this thesis is a theoretical work that however deals with problems of great relevane in several near/mid term quantum technologies. In particular, each of the main lines of my thesis is closely related to quantum communications, quantum computing and quantum sensing.
+
+
+SLIDE 3
+
+In quantum communications, and in particular long-distance quantum communications, we use light as an information career in order to communicate between two parties, for example ground earth and a satellite.
+
+Why do we use light? Well, we use it because photons move fast, and they ussually intereact very little with the environment.
+
+However, for signals whose intensity is weak enough, quantum effects (and in particular distinguishability effects) become relevant. Thus, the question of how to best measure the quantum information raises. While in many cases we can provide a theoretical answer for such a question, implementing the optimal measurement is potentially forbidden with current technologies, and another question raises which is how to implement such measurement in the lab.
+
+Moreover, the presence of noisy channels might alter the original signal, and this channels are often hard to model in practice. So the necesisty to develop tools to deal with unknown sources of noise in long-distance quantum communications, and thus to "calibrate" the quatnum measurement to the specific setting at hand, is also present.
+
+
+SLIDE 4
+
+On the other hand, we have the so called Noisy Intermmedaite-Scale quantum devices, which are very small and very noisy versions of a quantum computer and need to be tailored in such a way to perform an specific task. Despite the incredible amount of noise and limitations that we currently need to deal when working with such devices, it has recently been achieved an experimental quantum advantage for boson sampling problem. However, among the many problems that NISQ devices present nowadays, we still lack techniques for how to tailor the NISQ hardware (that means, how to design a quantum circuit) for each specific task.
+
+
+SLIDE 5
+
+Finally, despite all the noise that is injected in NISQ devices for quantum computing purposes, we do have a precise experimental control of quantum systems in the lab. The same reason that makes quantum systems so fragile and hard to handle also makes them highly sensitive to external interactions with their environment. Here, we will focus on a quantum system that is being continuously-monitored. This leads to a measurement signal, and we will develop tools for better process this classical data.
+
+
+SLIDE 6
+
+In each of the problems introduced before, namely measurement calibration for long-distance quantum communication, quantum crcuit design in NISQ applications and data processing for continuously-monitored quantum systems, we can readily identify that a decision needs to be taken by us, scientists, in order to better make use of such technologies (and perhaphs importantly, to explore quantum nature).
+
+In this thesis we use each of these paradigmatic problems as a framework for us - human scientists - to interact with artificially-intelligent agents.
+
+SLIDE 7
+
+So what are artifically-intelligent agents? To grasp this concept, here we have a video of what is considered the first intellligent (not artificial) agent that we are aware of, which is known as a slime mold and is a large amoeba-like cell that is able to expand and merge with other cells of that type in order to search for food. Once the food has been found, it modifies its shape in order to spread the food throughout all the organism in an efficient way. In this experiment, the researchers have placed different slime molds inside a maze, and then put two food sources at different points of the maze. After and expansion phase, the slime mold finds the food source and communicate with the rest of the organism. Finally, in the contraction phase, it optimizes the shape in order to bring the food throughout the entire organism, and such solution is given by solving the maze. As we can see, it finds a pretty efficient solution for the maze.
+
+SLIDE 8
+
+Artificial intelligence is about mimicking and exploiting such properties of natural systems in order to tackle some problem that we humans want to deal with.
+
+For instance, reinforcement learning is inspired in wether the food was found or not, and the agent optimizes its actions according to the rewards it enjoys. Importantly, only the reward can be used for the optimization, and thus a model of the environment is not strictly necessary, meaning that the agent learns solely by the reward value.
+
+Similarly, we can use the slime-mold (or algorithms inspired in slime-mold behaviour) for optimization problems, where the model and rules of the problem are shown to the agent, but the solutions are unknown even for us. In this example, researchers have placed food in a scaled map of cities around Tokio, and after the expansion + contraction phases, the slime-mold structures in a shape strikingly similar to the japanese rail system network.
+
+Finally, we might use machine-learning methods to discriminate between different objects - or even people -, and track them. These algorithms have their roots in statistical inference methods, and constitute an exciting way to process data that is observed in real-time.
+
+SLIDE 9
+So, what I do in my thesis is to study how different machine-learning agents (which might or might not be very sophisticated in practice) can help us to make decisions on the three different problems regarding quantum information processing and technological applications.
+
+The frameworks are interconnected to each other by the awareness degree that the agent posses of the task at hand. This means how much information the agent has aboutthe problem it needs to solve.
+
+In the long-distance setting, we will give basically no information to the agent, and asked to calibrate the measurement using only a binary reward signal, ignoring the intensity of the signals, or outcome probabilities. Thus, we will say that the agent learns in the darkness
+
+In the circuit design problem, the agent will be equipped with information about the circuit (it will know how the circuit looks), and will also be given a circuit optimization toolkit. However, the structure of the solution and a model that tells whether a circuit is good or not is even unavailable to us, and thus the agent is semi-agnostic. Thus, we will say that the agent learns in the twilight.
+
+In the data processing for continuously-monitored systems, the agent will have full knowledge of the signals' probability distributions, and it will be asked to deal with statistical inference problems, namely with parameter discrimination and estimation. Thus, we will say that the agent learns in the daylight.
+
+SLIDE 10
+So here it is the outline of my dissertation. While the chapters are interconnected to each other by the awareness degree, they can also be considered independently, and this is what we will do now. In this regard, by the end of each chapter I will potentially become very technical, however if someone gets lost, you can recap in the following section. 
+
+
+
+
+
+
+
+
+
+$
